@@ -20,7 +20,7 @@ export default function TemplateDetails() {
       </Helmet>
       <div className="text-secondary mx-4">
         {/* breadcrumb section with logic  */}
-        <header className="pt-24 " data-aos="fade-down">
+        <header className=" " data-aos="fade-down">
           {/* breadcrumb section  */}
           <header className="pt-24" data-aos="fade-down">
             <div className="flex justify-between md:items-center items-end">

@@ -56,7 +56,7 @@ export default function FunFacts() {
             <LazyLoadImage
               src="https://i.ibb.co/GTZn2FD/globe.png"
               alt="globe"
-              className="transition-transform duration-1000 ease-in-out group-hover:scale-105" // Fancy animation effect using Tailwind CSS group-hover
+              className="transition-transform zoom-animation duration-1000 ease-in-out group-hover:scale-105" // Fancy animation effect using Tailwind CSS group-hover
             />
           </div>
         </div>
