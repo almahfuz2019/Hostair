@@ -35,10 +35,10 @@ const router = createBrowserRouter([
         element: <TemplatesPage />,
       },
 
-        {
-          path: "/template/details/:name",
-          element: <TemplateDetails />,
-        },
+      {
+        path: "/template/details/:name",
+        element: <TemplateDetails />,
+      },
     ],
   },
 ]);

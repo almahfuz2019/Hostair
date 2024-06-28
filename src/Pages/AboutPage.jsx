@@ -1,14 +1,18 @@
+import { Helmet } from "react-helmet-async";
+import FAQ_About from "../Components/About/FAQ_About";
 import Hero_about from "../Components/About/Hero_about";
 import OurTeam from "../Components/About/OurTeam";
 import WhatWeDo from "../Components/About/WhatWeDo";
-import FAQ from "../Components/Shared/FAQ";
 
 export default function AboutPage() {
   return (
     <div>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
       <Hero_about />
       <WhatWeDo />
-      <FAQ />
+      <FAQ_About />
       <OurTeam />
     </div>
   );

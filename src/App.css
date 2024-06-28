@@ -1,13 +1,78 @@
 body {
-  background-color: black;
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
 }
-/* fonts */
+/* backgroud pattern  */
+/* Phone */
+@media (max-width: 599px) {
+  body {
+    background-image: url("https://i.ibb.co/3ChSW0j/mobile.png");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1023px) {
+  body {
+    background-position: top;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-image: url("https://i.ibb.co/56hWDVQ/mobile.png");
+  }
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  body {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("https://i.ibb.co/2WXn8zp/background-pattern.png");
+  }
+}
+/* fonts  */
+.lato_font {
+  font-family: Lato;
+}
 .rubik_font {
+  font-family: Rubik;
 }
-.inter_font {
+
+/* for templats section  */
+.pattern {
+  background-image: url("https://i.ibb.co/mzkdQVz/pattern-1.png");
+  background-position: top;
+  background-repeat: no-repeat;
 }
+/* waht we do  (pattern Image )*/
+.pattern5 {
+  background-image: url("https://i.ibb.co/T0CZrbC/background-pattern-1.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  /* background-color: red; */
+  background-size: contain;
+}
+
+.relative:hover .overlay {
+  opacity: 1;
+}
+/* for home page  */
+.lighting {
+  background-image: url("https://i.ibb.co/FwQLdpY/sport-lights.png");
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* active route  */
 .active {
   color: #e51736;
+}
+/* for smooth scroll  */
+html {
+  scroll-behavior: smooth;
 }
 /* primary button  */
 .primary-btn-style {
@@ -25,6 +90,22 @@ body {
 .primary-btn-style:hover {
   background: linear-gradient(#b2001b, #e60023);
 }
+/* secondary button  */
+.secondary-btn-style {
+  padding: 8px 16px;
+  background: linear-gradient(#46464b, #26262c) !important;
+  box-shadow: inset 0 1px rgba(255, 1, 1, 0.16), inset 0 -2px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 1;
+}
+
+.secondary-btn-style:hover {
+  background: linear-gradient(#26262c, #46464b) !important;
+}
 /* primary text  */
 .primary-text {
   background: linear-gradient(to right, #ffffffcc, #6d7580);
@@ -35,7 +116,7 @@ body {
 .primary-border {
   border: 0.25px solid #eeeeee !important;
 }
-
+/* we din't use this animation !  */
 /* animation  */
 .card-container {
   position: relative;
@@ -55,7 +136,7 @@ body {
 
 .card-border::before {
   content: "";
-  background: conic-gradient(#ff0052 25%, transparent 25%);
+  background: conic-gradient(#b2001b 2%, transparent 25%);
   width: 150%;
   height: 150%;
   position: absolute;
@@ -84,4 +165,25 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* user review  */
+.user-review-bg-color {
+  background: linear-gradient(#2b2b2e, #131316);
+  border: 0.25px solid #f5f5f547;
+}
+
+/* slider  */
+.slider-bg-color {
+  position: relative;
+  z-index: 10;
+
+  background: linear-gradient(#870d28, #06060900) !important;
+}
+/* notice  */
+.red_bg {
+  background: linear-gradient(#e60023, #800013) !important;
+}
+.black_bg {
+  background: linear-gradient(#2b2b2e, #131316) !important;
 }

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function FAQ() {
+export default function FAQ_About() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -42,19 +42,18 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="max-w-[1120px] mx-auto pt-24 px-4 sm:px-0">
-      <div className="flex flex-col lg:flex-row justify-between gap-10">
-        <div className="mb-8 lg:mb-0">
-          <p className="font-normal text-xl text-primary">FAQ</p>
-          <h1 className="font-medium text-[40px] primary-text mb-5">
-            Frequently asked <br /> questions
-          </h1>
-          <p className="text-[18px] font-normal text-secondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
-          </p>
+    <div className="max-w-[1120px] mx-auto pt-24 px-4">
+      <header data-aos="fade-up">
+        <div className="flex items-end gap-4 mb-14">
+          <span className="text-primary rubik_font font-medium text-4xl leading-none">
+            <span className="hidden md:block">Frequently asked questions</span>
+            <span className="md:hidden block">FAQ</span>
+          </span>
+          <div className="flex-grow border-t border-primary"></div>
         </div>
-        <div className="flex flex-col gap-3 inter_font w-full">
+      </header>
+      <div className="sm:w-[70%] ml-auto">
+        <div className="flex flex-col gap-3  w-full">
           {/* Map through faqs array to render each FAQ item */}
           {faqs.map((faq, index) => (
             <div
@@ -68,7 +67,7 @@ export default function FAQ() {
                 name="faq-accordion"
                 defaultChecked={index === 0}
               />
-              <div className="collapse-title text-xl font-medium text-[18px] py-5">
+              <div className="collapse-title text-xl font-medium text-[18px] ">
                 {faq.question}
               </div>
               <div className="collapse-content bg-white">

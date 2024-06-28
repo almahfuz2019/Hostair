@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-
+import { Link } from "react-router-dom";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { contactData } from "../../../public/ContactData";
+AOS.init();
 export default function Contact() {
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(null);
+  // form
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm();
-  const [termsAccepted, setTermsAccepted] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(null);
 
   const onSubmit = (data) => {
     if (data.terms) {
@@ -23,80 +29,66 @@ export default function Contact() {
   };
 
   return (
-    <div className="max-w-[1120px] mx-auto  ">
-      <header className="pt-24">
-        <div className="flex justify-between items-center">
-          <h1 className="text-[56px] rubik_font font-medium primary-text">
-            About Us
+    <div className="max-w-[1120px] mx-auto px-4">
+      {/* breadcrumb section  */}
+      <header className="pt-24" data-aos="fade-down">
+        <div className="flex justify-between md:items-center items-end">
+          <h1 className="text-4xl md:text-[56px] rubik_font font-medium primary-text">
+            Contact Us
           </h1>
-          <p className="text-[#9CA0AB] text-[26px] inter_font font-normal">
-            Home / <span className="text-primary">About</span>
+          <p className="text-[#9CA0AB] text-base md:text-[26px] font-normal">
+            Home /{" "}
+            <span className="light:text-primary dark:text-primary">
+              Contact
+            </span>
           </p>
         </div>
-        <img
-          className="mt-6 mx-auto w-full"
+        <LazyLoadImage
+          className="mt-6 mx-auto "
           src="https://i.ibb.co/qr880bH/Line-1.png"
-          alt=""
+          alt="Line"
         />
       </header>
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-16 py-24">
-        <div className="flex flex-col gap-6 lg:gap-14 w-full lg:w-[40%] mb-8 lg:mb-0">
-          {/* Contact Cards */}
-          <div
-            className="bg-[#212327] gap-4 p-6 rounded-2xl text-white flex items-center"
-            data-aos="fade-right"
-          >
-            <div>
-              <img src="https://i.ibb.co/RS1BD6w/Group-36-1.png" alt="" />
+      {/* Contact Cards */}
+      <div className="flex flex-col-reverse lg:flex-row items-start justify-center gap-16 pt-24">
+        <div
+          className="lg:flex grid grid-cols-1 md:grid-cols-2 lg:flex-col gap-6  w-full  lg:w-[40%] mb-8 lg:mb-0"
+          data-aos="fade-right"
+        >
+          {contactData.map((contact, index) => (
+            <div
+              key={index}
+              className="bg-[#212327] gap-4 p-6 rounded-2xl text-white flex items-center"
+              data-aos="fade-up"
+              data-aos-delay={index * 100} // Delay for animation effect
+            >
+              <div>
+                <LazyLoadImage src={contact.imgSrc} alt={contact.alt} />
+              </div>
+              <div>
+                <p className="text-[#9CA0AB] text-[18px] font-normal mb-3">
+                  {contact.title}
+                </p>
+                <p className="text-secondary text-xl font-normal">
+                  {contact.details}
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-[#9CA0AB] text-[18px] font-normal mb-3">
-                Call Us
-              </p>
-              <p className="text-secondary text-xl font-normal">0123 456 789</p>
-            </div>
-          </div>
-          <div
-            className="bg-[#212327] gap-4 p-6 rounded-2xl text-white flex items-center"
-            data-aos="fade-right"
-          >
-            <div>
-              <img src="https://i.ibb.co/2t7Z8qZ/Group-36-2.png" alt="" />
-            </div>
-            <div>
-              <p className="text-[#9CA0AB] text-[18px] font-normal mb-3">
-                Call Us
-              </p>
-              <p className="text-secondary text-xl font-normal">0123 456 789</p>
-            </div>
-          </div>
-          <div
-            className="bg-[#212327] gap-4 p-6 rounded-2xl text-white flex items-center"
-            data-aos="fade-right"
-          >
-            <div>
-              <img src="https://i.ibb.co/d0xB1Zy/Group-36.png" alt="" />
-            </div>
-            <div>
-              <p className="text-[#9CA0AB] text-[18px] font-normal mb-3">
-                Call Us
-              </p>
-              <p className="text-secondary text-xl font-normal">0123 456 789</p>
-            </div>
-          </div>
+          ))}
         </div>
         <div
           className="bg-[#212327] p-8 lg:p-14 rounded-2xl w-full lg:w-[60%]"
           data-aos="fade-left"
         >
+          {/* success Message  */}
           {submitSuccess ? (
             <div className="bg-[#212327] text-center">
-              <img
+              <LazyLoadImage
                 className="mx-auto animate-pulse"
                 src="https://i.ibb.co/FXHcjr8/Group-39.png"
-                alt=""
+                alt="icon"
               />
-              <h1 className="font-medium text-[32px] lg:text-[40px] text-secondary">
+              <h1 className="font-medium rubik_font text-[20px] lg:text-[30px] text-secondary">
                 Thank You!
               </h1>
               <p className="text-lg lg:text-xl text-accent mb-6 mt-2 font-normal text-center">
@@ -104,17 +96,24 @@ export default function Contact() {
                 soon as possible
               </p>
               <div className="flex flex-col lg:flex-row gap-5 justify-center items-center">
-                <button className="rounded-md btn btn-primary text-neutral font-medium text-base">
+                <Link
+                  to="/"
+                  className="primary-btn-style font-medium text-base"
+                >
                   Back to home
-                </button>
-                <button className="rounded-md btn btn-primary text-neutral font-medium text-base">
+                </Link>
+                <Link
+                  to="/pricing"
+                  className="primary-btn-style font-medium text-base"
+                >
                   Pricing plans
-                </button>
+                </Link>
               </div>
             </div>
           ) : (
             <>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              {/* contact Form  */}
+              <form onSubmit={handleSubmit(onSubmit)} className="w-full">
                 <div className="flex flex-col lg:flex-row justify-between gap-4">
                   <div className="mb-4 w-full">
                     <label className="block text-accent mb-2 text-base font-medium">
@@ -124,7 +123,7 @@ export default function Contact() {
                       {...register("firstName", {
                         required: "First name is required",
                       })}
-                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#F5F5F5] mb-1"
+                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                       placeholder="Enter your name"
                     />
                     {errors.firstName && (
@@ -141,7 +140,7 @@ export default function Contact() {
                       {...register("lastName", {
                         required: "Last name is required",
                       })}
-                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#F5F5F5] mb-1"
+                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                       placeholder="Enter your name"
                     />
                     {errors.lastName && (
@@ -159,8 +158,13 @@ export default function Contact() {
                     <input
                       {...register("email", {
                         required: "Email is required",
+                        pattern: {
+                          value:
+                            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                          message: "Invalid email address",
+                        },
                       })}
-                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#F5F5F5] mb-1"
+                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                       placeholder="Enter your email"
                     />
                     {errors.email && (
@@ -177,7 +181,7 @@ export default function Contact() {
                       {...register("phoneNumber", {
                         required: "Phone number is required",
                       })}
-                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#F5F5F5] mb-1"
+                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                       placeholder="Enter your phone number"
                     />
                     {errors.phoneNumber && (
@@ -196,7 +200,7 @@ export default function Contact() {
                     {...register("message", {
                       required: "Message is required",
                     })}
-                    className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#F5F5F5] mb-1"
+                    className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                     placeholder="What can we help with you?"
                   />
                   {errors.message && (
@@ -233,8 +237,9 @@ export default function Contact() {
                   </p>
                 )}
                 <button
+                  style={{ paddingTop: "14px", paddingBottom: "14px" }}
                   type="submit"
-                  className="px-6 py-2 rounded-md bg-primary primary-btn-style text-base font-medium"
+                  className="px-6  rounded-md bg-primary primary-btn-style text-base font-medium"
                 >
                   Submit
                 </button>

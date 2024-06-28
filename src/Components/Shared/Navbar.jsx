@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="overflow-hidden max-w-[1120px] mx-auto bg-black">
+    <div className="overflow-hidden max-w-[1120px] mx-auto ">
       <div className="relative z-50 hidden lg:block">
         <div className="w-full text-neutral bg-transparent py-2 shadow">
           <div className="flex flex-col px-4 mx-auto lg:items-center lg:justify-between lg:flex-row md:px-6 lg:px-8">
@@ -32,11 +32,11 @@ const Navbar = () => {
               {/* Logo */}
               <NavLink
                 to="/"
-                className="text-lg font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline"
+                className=" tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline"
               >
                 <LazyLoadImage
                   effect="blur"
-                  className="h-[45px]"
+                  className=""
                   src="https://i.ibb.co/tQDm8Dd/logo-1.png"
                   alt="logo"
                 />
@@ -60,9 +60,6 @@ const Navbar = () => {
                 <NavLink className={navItemStyle} to="/pricing">
                   Pricing
                 </NavLink>
-                <NavLink className={navItemStyle} to="/team">
-                  Team
-                </NavLink>
               </div>
               <div className="flex justify-end ml-auto gap-4">
                 <Link
@@ -72,7 +69,7 @@ const Navbar = () => {
                   Contact Us
                 </Link>
                 {/* Light mode and Dark mode toggle */}
-                <label className="swap swap-rotate my-4 md:my-0">
+                {/* <label className="swap swap-rotate my-4 md:my-0">
                   <input
                     type="checkbox"
                     checked={isDarkMode}
@@ -92,7 +89,7 @@ const Navbar = () => {
                   >
                     <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                   </svg>
-                </label>
+                </label> */}
               </div>
             </nav>
           </div>

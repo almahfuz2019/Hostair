@@ -1,212 +1,62 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { AllTemplatesData } from "../../../public/Template";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function Templates_Home() {
   return (
-    <div className="max-w-screen-xl mx-auto py-24">
-      <div>
-        <div className="text-center mb-20">
-          <h1 className="text-xl font-normal  text-primary">Our Special</h1>
-          <p className="text-secondary text-[40px] font-medium mb-6 ">
-            Realtor website templates
-          </p>
-        </div>
-        <div className="grid grid-cols-3 gap-10">
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
+    <div className="pattern bg-contain">
+      <div className="max-w-[1120px]  mx-auto py-24">
+        {/* section header  */}
+        <div>
+          <div className="text-center">
+            <h1 className="text-xl font-normal  text-primary mb-2">
+              Our Special
+            </h1>
+            <p className="primary-text rubik_font  text-[40px] leading-tight font-medium ">
+              Realtor website templates
+            </p>
+          </div>
+          {/* Templates Grid */}
+          <div className="py-24">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-y-10">
+              {AllTemplatesData.slice(0, 6).map((template) => (
+                <Link
+                  to={`/template/details/${template.templateName}`}
+                  key={template.id}
+                >
+                  <div
+                    className="mx-auto   text-center flex flex-col card-container"
+                    data-aos="fade-up"
+                  >
+                    <div className="bg-[#212327] px-6 border border-[#f5f5f547] rounded-2xl hover:border-primary">
+                      <LazyLoadImage
+                        src={template.images[0]} // Assuming first image as template image
+                        className="rounded-2xl border-[2px] border-transparent bg-back"
+                        alt="Template"
+                      />
+                    </div>
+                    <div className="text-left mt-3 ">
+                      <p className="text-secondary text-[24px] font-normal">
+                        {template.templateName}
+                      </p>
+                      <p className="text-[#9CA0AB] text-[20px] font-normal">
+                        {template.mode} . {template.includePages.length} pages
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
+            {/* button for more templates  */}
+            <div className="mt-10 text-center ">
+              <Link
+                to="/templates"
+                className=" text-[18px] primary-btn-style font-medium"
+              >
+                All Templates
+              </Link>
             </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link to="/template/details/4">
-            <div className="mx-auto  items-center text-center flex flex-col ">
-              <div className="">
-                <img
-                  src="https://i.ibb.co/Yykssf7/Group-25-1.png"
-                  className=" rounded-2xl border-[0.25px] hover:border-primary px-8 "
-                  alt="Templates"
-                />
-              </div>
-              <div className="text-left -ml-8 mt-3">
-                <p className="text-secondary text-[24px] font-normal">
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className="text-[#9CA0AB] text-[20px] font-normal">
-                  Light mode . 8 pages{" "}
-                </p>
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className="mt-10 text-center ">
-          <Link to="" className="btn btn-primary px-10 text-[18px] font-medium">
-            All Templates
-          </Link>
+          </div>
         </div>
       </div>
     </div>
