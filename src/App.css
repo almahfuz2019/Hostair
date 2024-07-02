@@ -2,6 +2,13 @@ body {
   font-family: Inter;
   margin: 0;
   padding: 0;
+  background-color: white;
+}
+.dark body {
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 /* backgroud pattern  */
 /* Phone */

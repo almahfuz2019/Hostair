@@ -20,7 +20,7 @@ export default function NotFound() {
         <Navbar />
         <div className="flex flex-col  h-screen justify-center items-center py-16 md:py-32">
           <h1
-            className="font-medium text-[40px] rubik_font leading-tight  text-center mb-14 md:mb-20  primary-text rubik_font"
+            className="font-medium text-[40px] rubik_font leading-tight  text-center mb-14 md:mb-20  dark:primary-text text-[#3C3950] rubik_font"
             data-aos="fade-up"
           >
             Opppsss, <br /> page not found

@@ -34,7 +34,7 @@ export default function Footer() {
       {/* Subscription Form */}
       <div className=" px-4 -mb-20 max-w-xl   relative z-20 mx-auto ">
         <div
-          className="text-center bg-[#1c1c1e] px-8 py-12 rounded-md"
+          className="text-center bg-[#EB304D] dark:bg-[#1c1c1e] px-8 py-12 rounded-md"
           data-aos="fade-up"
         >
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -42,12 +42,12 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email here . . ."
-                className="p-4 w-full max-w-[400px] bg-[#2b2b2e] text-white placeholder-gray-500 rounded-l-md focus:outline-none"
+                className="p-4 w-full max-w-[400px] bg-[#FFFFFF] dark:bg-[#2b2b2e] text-white placeholder-gray-500 rounded-l-md focus:outline-none"
                 {...register("email", { required: true })}
               />
               <button
                 type="submit"
-                className="bg-primary text-white px-4 rounded-r-md"
+                className=" bg-[#3C3950] dark:bg-primary text-white px-4 rounded-r-md"
               >
                 Subscribe
               </button>
@@ -65,7 +65,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Content */}
-      <div className="bg-[#131316] px-4">
+      <div className="dark:bg-[#131316] bg-[#3C3950] px-4">
         <div className="py-8 md:pb-16  pt-36 text-white max-w-[1120px] mx-auto items-end grid grid-cols-1 md:grid-cols-3 lg:flex gap-x-20 gap-y-8 lg:gap-y-16">
           {/* Company Info Section */}
           <aside className="lg:w-[20%] mb-8 lg:mb-0" data-aos="fade-up">

@@ -12,7 +12,7 @@ export default function Templates() {
   // Array of template objects
 
   return (
-    <div className="max-w-[1120px] mx-auto ">
+    <div className="max-w-[1120px]  mx-auto ">
       <div className="px-4">
         {/* breadcrumb section  */}
         <header className="pt-24" data-aos="fade-down">
@@ -20,11 +20,8 @@ export default function Templates() {
             <h1 className="text-4xl rubik_font md:text-[56px] rubik_font font-medium primary-text flex md:pb-4">
               <span className="md:block hidden mr-4 ">Our </span> Templates
             </h1>
-            <p className="text-[#9CA0AB] text-base md:text-[26px] font-normal">
-              Home /
-              <span className="light:text-primary dark:text-primary ml-1">
-                All Templates
-              </span>
+            <p className="dark:text-[#9CA0AB] text-[#5F727F] text-base md:text-[26px] font-normal">
+              Home /<span className="text-primary ml-1">All Templates</span>
             </p>
           </div>
           <LazyLoadImage
@@ -46,7 +43,7 @@ export default function Templates() {
                   className="mx-auto  text-center flex flex-col card-container"
                   data-aos="fade-up"
                 >
-                  <div className="bg-[#212327] px-6 border border-[#f5f5f547] rounded-2xl hover:border-primary">
+                  <div className="dark:bg-[#212327] bg-[#FFF5F6] px-6 border dark:border-[#f5f5f547] border-[#EB304D] rounded-2xl hover:border-primary">
                     <LazyLoadImage
                       src={template.images[0]} // Assuming first image as template image
                       className="rounded-2xl border-[2px] border-transparent bg-back"
@@ -54,10 +51,10 @@ export default function Templates() {
                     />
                   </div>
                   <div className="text-left mt-3">
-                    <p className="text-secondary text-[24px] font-normal">
+                    <p className="dark:text-secondary text-[#5F727F] text-[24px] font-normal">
                       {template.templateName}
                     </p>
-                    <p className="text-[#9CA0AB] text-[20px] font-normal">
+                    <p className="dark:text-[#9CA0AB] text-[#5F727F] text-[20px] font-normal">
                       {template.mode} . {template.includePages.length} pages
                     </p>
                   </div>

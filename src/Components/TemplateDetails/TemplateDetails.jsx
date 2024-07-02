@@ -14,7 +14,7 @@ export default function TemplateDetails() {
   }
 
   return (
-    <div className="max-w-[1120px] mx-auto">
+    <div className="max-w-[1120px] dark:bg-black bg-white mx-auto">
       <Helmet>
         <title>{template.templateName}</title>
       </Helmet>
@@ -28,7 +28,7 @@ export default function TemplateDetails() {
                 <span className="lg:hidden block">{template.templateName}</span>
                 <span className="hidden lg:block">{template.templateName}</span>
               </h1>
-              <p className="text-[#9CA0AB]  hidden text-base md:text-[26px] font-normal md:flex">
+              <p className="text-[#9CA0AB]   hidden text-base md:text-[26px] font-normal md:flex">
                 Home / <span className="lg:block hidden">All templates / </span>
                 <span className="light:text-primary dark:text-primary ml-2">
                   Template
@@ -65,8 +65,12 @@ export default function TemplateDetails() {
               <h2 className="text-[40px] leading-tight font-medium text-primary mb-4">
                 Overview
               </h2>
-              <p className="mb-4">{template.overview.content_Part1}</p>
-              <p className="mb-4">{template.overview.content_Part2}</p>
+              <p className="mb-4 dark:text-[#CECECE] text-[#5F727F]">
+                {template.overview.content_Part1}
+              </p>
+              <p className="mb-4 dark:text-[#CECECE] text-[#5F727F]">
+                {template.overview.content_Part2}
+              </p>
             </section>
 
             {/* Include Pages Section */}
@@ -74,7 +78,7 @@ export default function TemplateDetails() {
               <h2 className="text-[40px] leading-tight font-medium text-primary mb-4">
                 Include pages
               </h2>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside dark:text-[#CECECE] text-[#5F727F]">
                 {template.includePages.map((page, index) => (
                   <li key={index}>{page}</li>
                 ))}
@@ -86,14 +90,14 @@ export default function TemplateDetails() {
               <h2 className="text-[40px] leading-tight font-medium text-primary ">
                 Feature List
               </h2>
-              <p className="my-5">
+              <p className="my-5 dark:text-[#CECECE] text-[#5F727F]">
                 Our templates are 100% customizable - we provide you with the
                 ultimate flexibility to customize, update, and change easily as
                 per your requirements. You can clone elements, pages, and
                 sections very easily with clear, reusable code and make tons of
                 style changes in the template.
               </p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside dark:text-[#CECECE] text-[#5F727F]">
                 {template.featuresList.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}

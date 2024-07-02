@@ -9,7 +9,7 @@ export default function Templates_Home() {
         {/* section header  */}
         <div>
           <div className="text-center">
-            <h1 className="text-xl font-normal  text-primary mb-2">
+            <h1 className="text-xl font-normal text-primary   mb-2">
               Our Special
             </h1>
             <p className="primary-text rubik_font  text-[40px] leading-tight font-medium ">
@@ -28,7 +28,7 @@ export default function Templates_Home() {
                     className="mx-auto   text-center flex flex-col card-container"
                     data-aos="fade-up"
                   >
-                    <div className="bg-[#212327] px-6 border border-[#f5f5f547] rounded-2xl hover:border-primary">
+                    <div className="dark:bg-[#212327] bg-[#FFF5F6] px-6 border dark:border-[#f5f5f547] border-[#EB304D] rounded-2xl hover:border-primary">
                       <LazyLoadImage
                         src={template.images[0]} // Assuming first image as template image
                         className="rounded-2xl border-[2px] border-transparent bg-back"
@@ -36,10 +36,10 @@ export default function Templates_Home() {
                       />
                     </div>
                     <div className="text-left mt-3 ">
-                      <p className="text-secondary text-[24px] font-normal">
+                      <p className="dark:text-secondary text-[#5F727F] text-[24px] font-normal">
                         {template.templateName}
                       </p>
-                      <p className="text-[#9CA0AB] text-[20px] font-normal">
+                      <p className="dark:text-[#9CA0AB] text-[#5F727F] text-[20px] font-normal">
                         {template.mode} . {template.includePages.length} pages
                       </p>
                     </div>

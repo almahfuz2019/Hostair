@@ -62,7 +62,7 @@ export default function Hero() {
               estate agent services
             </h1>
             <p
-              className="text-[#9CA0AB] text-[16px] sm:text-[18px] mb-5"
+              className="dark:text-[#9CA0AB] text-[#5F727F] text-[16px] sm:text-[18px] mb-5"
               data-aos="fade-up"
               data-aos-delay="200"
             >

@@ -10,7 +10,7 @@ export default function FunFacts() {
 
   return (
     <div className="max-w-[1120px] mx-auto px-4 overflow-hidden">
-      <div className="bg-[#131316] border border-[#f5f5f547] lg:pl-14 lg:p-0 rounded-lg group">
+      <div className="dark:bg-[#131316] bg-[#FFF5F6] border dark:border-[#f5f5f547] border-[#EB304D] lg:pl-14 lg:p-0 rounded-lg group">
         {" "}
         {/* Add group class here */}
         <div className="flex flex-col-reverse lg:flex-row justify-between">
@@ -21,7 +21,7 @@ export default function FunFacts() {
             <h1 className="text-[40px] rubik_font leading-tight font-medium mb-6">
               We help you, any-time you want any-where you want
             </h1>
-            <div className="flex flex-col gap-2 mb-10 text-secondary">
+            <div className="flex flex-col gap-2 mb-10 dark:text-secondary text-[#5F727F]">
               {[...Array(4)].map((_, index) => (
                 <div className="flex items-center gap-4" key={index}>
                   <LazyLoadImage
@@ -39,10 +39,10 @@ export default function FunFacts() {
                 { value: "25+", label: "Clients" },
               ].map((item, index) => (
                 <div key={index}>
-                  <h6 className="text-[40px] rubik_font leading-tight md:text-[70px] font-medium text-primary">
+                  <h6 className="text-[40px] rubik_font leading-tight md:text-[70px] text-primary font-medium  ">
                     {item.value}
                   </h6>
-                  <p className="md:text-xl text-sm text-secondary">
+                  <p className="md:text-xl text-sm dark:text-secondary text-[#3C3950]">
                     {item.label}
                   </p>
                 </div>

@@ -14,11 +14,11 @@ export default function Advertisement_Services() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         {/* header section   */}
         <div className="text-white order-2 lg:order-none " data-aos="fade-left">
-          <p className="text-primary text-xl">Services</p>
+          <p className=" text-xl text-primary">Services</p>
           <h1 className="text-[40px] rubik_font leading-tight primary-text font-medium mb-4 mt-1">
             AI & IDX integration
           </h1>
-          <p className="mb-8 text-[#9CA0AB]">
+          <p className="mb-8 dark:text-[#9CA0AB] text-[#5F727F]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

@@ -23,11 +23,11 @@ export default function Advertisement_Templates() {
           </div>
           {/* header section  */}
           <div className="text-white " data-aos="fade-left">
-            <p className="text-primary text-xl">Templates</p>
+            <p className=" text-xl text-primary">Templates</p>
             <h1 className="text-[40px] rubik_font leading-tight  primary-text font-medium mb-4 mt-1">
               Fully editable pre-made website templates
             </h1>
-            <p className="mb-8 text-[#9CA0AB]">
+            <p className="mb-8 dark:text-[#9CA0AB] text-[#5F727F]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

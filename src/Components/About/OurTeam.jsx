@@ -10,12 +10,12 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <div className="max-w-[1120px] mx-auto py-16 px-4">
+    <div className="max-w-[1120px]  mx-auto py-16 px-4">
       <div>
         {/* Section header */}
-        <div className="flex items-end gap-4 mb-14">
+        <div className="flex items-end gap-4 mb-14 text-primary">
           <div className="flex-grow border-t border-primary"></div>
-          <span className="text-primary rubik_font font-medium text-4xl leading-none">
+          <span className=" rubik_font font-medium text-4xl leading-none">
             <span className="hidden md:block"> Our amazing team</span>{" "}
             <span className="md:hidden block"> Our team</span>
           </span>
@@ -26,7 +26,7 @@ export default function OurTeam() {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="p-4 lg:w-1/2 lg:hover:bg-[#212327]"
+              className="p-4 lg:w-1/2 lg:hover:dark:bg-[#212327] "
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -37,13 +37,13 @@ export default function OurTeam() {
                   src={member.imageUrl}
                 />
                 <div className="flex-grow sm:pl-8 mt-6 lg:mt-0">
-                  <h2 className="font-medium text-xl text-secondary ">
+                  <h2 className="font-medium text-xl dark:text-secondary text-[#5F727F] ">
                     {member.name}
                   </h2>
-                  <h3 className="mb-3 mt-1 text-secondary text-sm md:text-[18px] font-normal">
+                  <h3 className="mb-3 mt-1 dark:text-secondary text-[#5F727F] text-sm md:text-[18px] font-normal">
                     {member.role}
                   </h3>
-                  <p className="mb-4 text-secondary font-normal">
+                  <p className="mb-4 dark:text-secondary text-[#5F727F] font-normal">
                     {member.bio}
                   </p>
                   {/* Social icons */}
@@ -51,7 +51,7 @@ export default function OurTeam() {
                     {member.social.map((social) => (
                       <a
                         key={social.id}
-                        className="text-gray-500 hover:text-gray-700 mr-4"
+                        className=" text-gray-500 hover:text-gray-700 mr-4"
                         href="#"
                       >
                         <LazyLoadImage

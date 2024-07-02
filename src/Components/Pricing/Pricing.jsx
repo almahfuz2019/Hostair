@@ -7,7 +7,7 @@ AOS.init();
 export default function Pricing() {
   return (
     <div>
-      <section className="max-w-[1120px]  mx-auto text-white text-center">
+      <section className="max-w-[1120px]  mx-auto text-white text-center ">
         <div className="mx-4">
           <div className="mx-auto">
             {/* breadcrumb section  */}
@@ -16,11 +16,8 @@ export default function Pricing() {
                 <h1 className="text-4xl rubik_font md:text-[56px] rubik_font font-medium primary-text pb-4">
                   Pricing
                 </h1>
-                <p className="text-[#9CA0AB] text-base md:text-[26px] font-normal">
-                  Home /{" "}
-                  <span className="light:text-primary dark:text-primary">
-                    Pricing
-                  </span>
+                <p className="dark:text-[#9CA0AB] text-[#5F727F] text-base md:text-[26px] font-normal">
+                  Home / <span className="text-primary">Pricing</span>
                 </p>
               </div>
               {/* line Image  */}
@@ -46,20 +43,22 @@ export default function Pricing() {
                       </div>
                     </div>
                   )}
-                  <div className="flex flex-grow flex-col p-2 space-y-6 rounded-2xl  shadow sm:p-8 bg-[#212327]">
+                  <div className="flex flex-grow flex-col p-2 space-y-6 rounded-2xl  shadow sm:p-8 dark:dark:bg-[#212327] bg-[#FFF5F6] bg-white dark:border-0 border border-[#C4C4C4]">
                     <div className="space-y-2 mt-6">
-                      <h4 className="text-base font-medium text-secondary mb-6">
+                      <h4 className="text-base font-medium dark:dark:text-secondary text-[#5F727F] text-[#5F727F]  mb-6">
                         {plan.title}
                       </h4>
-                      <span className="text-6xl font-medium text-white">
+                      <span className="text-6xl font-medium dark:text-white text-[#3C3950]">
                         {plan.price}
                       </span>
                       <span className="text-lg text-white">{plan.period}</span>
                     </div>
-                    <p className="text-secondary">{plan.description}</p>
-                    <div className="bg-[#292C33] rounded-2xl">
-                      <ul className="flex flex-col mx-auto   text-secondary gap-y-2  p-6 ">
-                        <h1 className="mb-4 text-[18px] font-medium">
+                    <p className="dark:dark:text-secondary text-[#5F727F] text-[#5F727F]">
+                      {plan.description}
+                    </p>
+                    <div className="dark:bg-[#292C33] bg-[#FFF5F6] rounded-2xl">
+                      <ul className="flex flex-col mx-auto text-[#5F727F]  dark:dark:text-secondary text-[#5F727F] gap-y-2  p-6 ">
+                        <h1 className="mb-4 text-[18px] font-medium text-[#3C3950] dark:dark:text-secondary text-[#5F727F]">
                           Available Features
                         </h1>
                         {plan.features.map((feature, idx) => (
@@ -91,7 +90,7 @@ export default function Pricing() {
                       <Link
                         to="/contact"
                         type="button"
-                        className="inline-block w-full px-5 py-3 tracking-wider text-center rounded-b-lg bg-primary hover:bg-red-600 text-base font-medium text-white"
+                        className="inline-block w-full px-5 py-3 tracking-wider text-center rounded-b-lg bg-[#EB304D] dark:bg-primary hover:bg-red-600 text-base font-medium text-white"
                       >
                         Get Started
                       </Link>

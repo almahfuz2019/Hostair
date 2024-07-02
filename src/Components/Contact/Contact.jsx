@@ -29,18 +29,15 @@ export default function Contact() {
   };
 
   return (
-    <div className="max-w-[1120px] mx-auto px-4">
+    <div className="max-w-[1120px]  mx-auto px-4">
       {/* breadcrumb section  */}
       <header className="pt-24" data-aos="fade-down">
         <div className="flex justify-between md:items-center items-end">
-          <h1 className="text-4xl md:text-[56px] rubik_font font-medium primary-text">
+          <h1 className="text-4xl md:text-[56px] rubik_font font-medium dark:primary-text ">
             Contact Us
           </h1>
-          <p className="text-[#9CA0AB] text-base md:text-[26px] font-normal">
-            Home /{" "}
-            <span className="light:text-primary dark:text-primary">
-              Contact
-            </span>
+          <p className="dark:text-[#9CA0AB] text-[#5F727F] text-base md:text-[26px] font-normal">
+            Home / <span className="text-primary">Contact</span>
           </p>
         </div>
         <LazyLoadImage
@@ -58,7 +55,7 @@ export default function Contact() {
           {contactData.map((contact, index) => (
             <div
               key={index}
-              className="bg-[#212327] gap-4 p-6 rounded-2xl text-white flex items-center"
+              className="dark:dark:bg-[#212327] bg-[#FFF5F6] bg-white gap-4 p-6 rounded-2xl text-white flex items-center dark:border-0 border border-[#C4C4C4]"
               data-aos="fade-up"
               data-aos-delay={index * 100} // Delay for animation effect
             >
@@ -66,10 +63,10 @@ export default function Contact() {
                 <LazyLoadImage src={contact.imgSrc} alt={contact.alt} />
               </div>
               <div>
-                <p className="text-[#9CA0AB] text-[18px] font-normal mb-3">
+                <p className="dark:dark:text-[#9CA0AB] text-[#5F727F] text-[#3C3950] text-[18px] font-normal mb-3">
                   {contact.title}
                 </p>
-                <p className="text-secondary text-xl font-normal">
+                <p className="dark:dark:text-secondary text-[#5F727F] text-xl font-normal text-[#5F727F] ">
                   {contact.details}
                 </p>
               </div>
@@ -77,21 +74,21 @@ export default function Contact() {
           ))}
         </div>
         <div
-          className="bg-[#212327] p-8 lg:p-14 rounded-2xl w-full lg:w-[60%]"
+          className="dark:dark:bg-[#212327] bg-[#FFF5F6] dark:border-0 border border-[#C4C4C4] bg-white p-8 lg:p-14 rounded-2xl w-full lg:w-[60%]"
           data-aos="fade-left"
         >
           {/* success Message  */}
           {submitSuccess ? (
-            <div className="bg-[#212327] text-center">
+            <div className="dark:bg-[#212327] bg-[#FFF5F6] text-center">
               <LazyLoadImage
                 className="mx-auto animate-pulse"
                 src="https://i.ibb.co/FXHcjr8/Group-39.png"
                 alt="icon"
               />
-              <h1 className="font-medium rubik_font text-[20px] lg:text-[30px] text-secondary">
+              <h1 className="font-medium rubik_font text-[20px] lg:text-[30px] dark:text-secondary text-[#5F727F]">
                 Thank You!
               </h1>
-              <p className="text-lg lg:text-xl text-accent mb-6 mt-2 font-normal text-center">
+              <p className="text-lg lg:text-xl text-[#3C3950] dark:text-accent mb-6 mt-2 font-normal text-center">
                 Your submission has been received, <br /> We will contact you as
                 soon as possible
               </p>
@@ -116,14 +113,14 @@ export default function Contact() {
               <form onSubmit={handleSubmit(onSubmit)} className="w-full">
                 <div className="flex flex-col lg:flex-row justify-between gap-4">
                   <div className="mb-4 w-full">
-                    <label className="block text-accent mb-2 text-base font-medium">
+                    <label className="block text-[#3C3950] dark:text-accent mb-2 text-base font-medium">
                       First Name
                     </label>
                     <input
                       {...register("firstName", {
                         required: "First name is required",
                       })}
-                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
+                      className="w-full p-3 bg-[#F1F1F1] dark:bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                       placeholder="Enter your name"
                     />
                     {errors.firstName && (
@@ -133,14 +130,14 @@ export default function Contact() {
                     )}
                   </div>
                   <div className="mb-4 w-full">
-                    <label className="block text-accent mb-2 text-base font-medium">
+                    <label className="block text-[#3C3950] dark:text-accent mb-2 text-base font-medium">
                       Last Name
                     </label>
                     <input
                       {...register("lastName", {
                         required: "Last name is required",
                       })}
-                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
+                      className="w-full p-3 bg-[#F1F1F1] dark:bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                       placeholder="Enter your name"
                     />
                     {errors.lastName && (
@@ -152,7 +149,7 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between gap-4 mt-4">
                   <div className="mb-4 w-full">
-                    <label className="block text-accent mb-2 text-base font-medium">
+                    <label className="block text-[#3C3950] dark:text-accent mb-2 text-base font-medium">
                       E-mail
                     </label>
                     <input
@@ -164,7 +161,7 @@ export default function Contact() {
                           message: "Invalid email address",
                         },
                       })}
-                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
+                      className="w-full p-3 bg-[#F1F1F1] dark:bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                       placeholder="Enter your email"
                     />
                     {errors.email && (
@@ -174,14 +171,14 @@ export default function Contact() {
                     )}
                   </div>
                   <div className="mb-4 w-full">
-                    <label className="block text-accent mb-2 text-base font-medium">
+                    <label className="block text-[#3C3950] dark:text-accent mb-2 text-base font-medium">
                       Phone number
                     </label>
                     <input
                       {...register("phoneNumber", {
                         required: "Phone number is required",
                       })}
-                      className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
+                      className="w-full p-3 bg-[#F1F1F1] dark:bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                       placeholder="Enter your phone number"
                     />
                     {errors.phoneNumber && (
@@ -192,7 +189,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="mb-4 mt-4">
-                  <label className="block text-accent mb-2 text-base font-medium">
+                  <label className="block text-[#3C3950] dark:text-accent mb-2 text-base font-medium">
                     Message
                   </label>
                   <textarea
@@ -200,7 +197,7 @@ export default function Contact() {
                     {...register("message", {
                       required: "Message is required",
                     })}
-                    className="w-full p-3 bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
+                    className="w-full p-3 bg-[#F1F1F1] dark:bg-[#131316] text-white rounded-[5px] border-[0.25px] border-[#f5f5f579] mb-1"
                     placeholder="What can we help with you?"
                   />
                   {errors.message && (
@@ -220,7 +217,9 @@ export default function Contact() {
                   />
                   <label
                     className={`font-medium text-${
-                      termsAccepted ? "white" : "[#F5F5F5]"
+                      termsAccepted
+                        ? "dark:white [#3C3950]"
+                        : "dark:[#F5F5F5] black"
                     }`}
                   >
                     Accept our Terms & Privacy

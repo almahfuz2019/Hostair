@@ -34,7 +34,7 @@ export default function WhatWeDo() {
         <header data-aos="fade-up">
           <div className="flex items-end gap-4 mb-14">
             <div className="flex-grow border-t border-primary"></div>
-            <span className="text-primary rubik_font font-medium text-4xl leading-none">
+            <span className=" rubik_font font-medium text-4xl leading-none text-primary">
               What we do
             </span>
           </div>
@@ -58,10 +58,10 @@ export default function WhatWeDo() {
 
           {/* Text content */}
           <article
-            className="text-base sm:text-lg text-secondary mt-4 md:mt-0 md:ml-0 "
+            className="text-base sm:text-lg dark:text-secondary text-[#5F727F] mt-4 md:mt-0 md:ml-0 "
             data-aos="fade-left"
           >
-            <p>
+            <p className="dark:text-secondary text-[#5F727F] font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

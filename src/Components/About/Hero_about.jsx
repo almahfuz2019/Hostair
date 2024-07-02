@@ -9,9 +9,8 @@ export default function Hero_about() {
           <h1 className="text-4xl md:text-[56px] rubik_font font-medium primary-text">
             About
           </h1>
-          <p className="text-[#9CA0AB] text-base md:text-[26px] font-normal">
-            Home /{" "}
-            <span className="light:text-primary dark:text-primary">About</span>
+          <p className="dark:text-[#9CA0AB] text-[#5F727F] text-base md:text-[26px] font-normal">
+            Home / <span className="text-primary">About</span>
           </p>
         </div>
         <LazyLoadImage
@@ -33,13 +32,16 @@ export default function Hero_about() {
         </div>
         <header className="mt-24" data-aos="fade-up">
           <div className="flex items-end gap-4 mb-14">
-            <span className="text-primary rubik_font font-medium text-4xl leading-none">
+            <span className=" rubik_font font-medium text-4xl leading-none text-primary">
               Who we are
             </span>
             <div className="flex-grow border-t border-primary"></div>
           </div>
         </header>
-        <p className="text-secondary font-normal" data-aos="fade-up">
+        <p
+          className="dark:text-secondary text-[#5F727F] font-normal"
+          data-aos="fade-up"
+        >
           {/* Long description */}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

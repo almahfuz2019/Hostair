@@ -44,8 +44,8 @@ export default function FAQ_About() {
   return (
     <div className="max-w-[1120px] mx-auto pt-24 px-4">
       <header data-aos="fade-up">
-        <div className="flex items-end gap-4 mb-14">
-          <span className="text-primary rubik_font font-medium text-4xl leading-none">
+        <div className="flex items-end gap-4 mb-14 text-primary">
+          <span className=" rubik_font font-medium text-4xl leading-none">
             <span className="hidden md:block">Frequently asked questions</span>
             <span className="md:hidden block">FAQ</span>
           </span>
@@ -58,7 +58,7 @@ export default function FAQ_About() {
           {faqs.map((faq, index) => (
             <div
               key={faq.id}
-              className="collapse collapse-plus bg-[#212327] primary-border rounded-[12px]"
+              className="collapse collapse-plus dark:bg-[#212327] bg-[#3C3950] primary-border rounded-[12px]"
               data-aos="fade-up"
             >
               <input
@@ -67,11 +67,13 @@ export default function FAQ_About() {
                 name="faq-accordion"
                 defaultChecked={index === 0}
               />
-              <div className="collapse-title text-xl font-medium text-[18px] ">
+              <div className="collapse-title text-xl font-medium text-[18px]  text-[#EEEEEE] ">
                 {faq.question}
               </div>
-              <div className="collapse-content bg-white">
-                <p className="mt-3 text-gray-500">{faq.answer}</p>
+              <div className="collapse-content dark:bg-white bg-[#7b788bb5]">
+                <p className="mt-3 text-[#EEEEEE] dark:text-gray-500">
+                  {faq.answer}
+                </p>
               </div>
             </div>
           ))}

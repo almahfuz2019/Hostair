@@ -48,7 +48,7 @@ export default function UsersReview() {
       <div className="max-w-[1120px] mx-auto">
         <div className="flex mx-4   gap-20 justify-end md:justify-between  relative z-20">
           <div className="md:block hidden">
-            <p className="text-primary text-xl">Testimonial</p>
+            <p className=" text-xl">Testimonial</p>
             <h1 className="text-[40px] rubik_font leading-tight primary-text font-medium mb-4 mt-1">
               Our Client’s Feedback
             </h1>
@@ -81,12 +81,12 @@ export default function UsersReview() {
       {/* slider  */}
       <Slider ref={sliderRef} {...settings}>
         {testimonials.map((testimonial, index) => (
-          <div className="mx-auto" key={index}>
+          <div className="mx-auto " key={index}>
             <div
-              className="user-review-bg-color text-white rounded-lg p-6 max-w-[94%] shadow-lg"
+              className="dark:user-review-bg-color bg-[#FFF5F6] text-white rounded-lg p-6 max-w-[94%] shadow-lg"
               style={{ padding: "20px", margin: "0 15px" }} // Added margin
             >
-              <div className="flex items-center mb-4">
+              <div className="flex  items-center mb-4">
                 <div className="flex text-yellow-400 space-x-1">
                   <LazyLoadImage
                     src="https://i.ibb.co/grCpcBY/Star.png"
@@ -111,7 +111,7 @@ export default function UsersReview() {
                 </div>
               </div>
               <blockquote className="mb-8">
-                <p className="text-lg text-left text-[#9CA0AB]">
+                <p className="text-lg text-left dark:text-[#9CA0AB] text-[#3C3950]">
                   {testimonial.text}
                 </p>
               </blockquote>
@@ -122,10 +122,10 @@ export default function UsersReview() {
                   alt={testimonial.name}
                 />
                 <div>
-                  <p className="font-medium text-lg text-secondary">
+                  <p className="font-medium text-lg dark:text-secondary text-[#5F727F]">
                     {testimonial.name}
                   </p>
-                  <p className="text-base -ml-2 text-[#9CA0AB]">
+                  <p className="text-base  dark:text-[#9CA0AB] text-[#3C3950]">
                     {testimonial.title}
                   </p>
                 </div>

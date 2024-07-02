@@ -16,7 +16,7 @@ const NavbarForPhone = () => {
     <div>
       <div className="mx-auto pb-10">
         {/* Navbar for Tablet and Phone */}
-        <nav className="bg-[#212327] pb-2  block shadow lg:hidden absolute left-0 right-0 z-50">
+        <nav className="dark:bg-[#212327] bg-[#FFF5F6] pb-2  block shadow lg:hidden absolute left-0 right-0 z-50">
           <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
