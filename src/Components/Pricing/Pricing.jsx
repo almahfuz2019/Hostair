@@ -32,33 +32,35 @@ export default function Pricing() {
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className="relative flex w-full mb-16 md:mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0 px-2 "
+                  className="relative  flex w-full mb-16 md:mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0 px-2 "
                   data-aos="fade-up"
                   data-aos-delay={index * 40} // Delay for animation effect
                 >
                   {index === 1 && (
-                    <div className="absolute inset-x-0 top-0 flex justify-center -mt-3">
+                    <div className="absolute inset-x-0 top-0 flex justify-center -mt-3 ">
                       <div className="inline-block primary-btn-style">
                         Most Popular
                       </div>
                     </div>
                   )}
-                  <div className="flex flex-grow flex-col p-2 space-y-6 rounded-2xl  shadow sm:p-8 dark:dark:bg-[#212327] bg-[#FFF5F6] bg-white dark:border-0 border border-[#C4C4C4]">
+                  <div className="flex flex-grow flex-col p-2 space-y-6 rounded-2xl  shadow sm:p-8 dark:dark:bg-[#212327] bg-[#FFF5F6]  dark:border-0 border border-[#C4C4C4]">
                     <div className="space-y-2 mt-6">
-                      <h4 className="text-base font-medium dark:dark:text-secondary text-[#5F727F] text-[#5F727F]  mb-6">
+                      <h4 className="text-base font-medium dark:dark:text-secondary  text-[#5F727F]  mb-6">
                         {plan.title}
                       </h4>
                       <span className="text-6xl font-medium dark:text-white text-[#3C3950]">
                         {plan.price}
                       </span>
-                      <span className="text-lg text-white">{plan.period}</span>
+                      <span className="text-lg dark:text-white text-[#3C3950]">
+                        {plan.period}
+                      </span>
                     </div>
-                    <p className="dark:dark:text-secondary text-[#5F727F] text-[#5F727F]">
+                    <p className="dark:dark:text-secondary text-[#5F727F] ">
                       {plan.description}
                     </p>
                     <div className="dark:bg-[#292C33] bg-[#FFF5F6] rounded-2xl">
-                      <ul className="flex flex-col mx-auto text-[#5F727F]  dark:dark:text-secondary text-[#5F727F] gap-y-2  p-6 ">
-                        <h1 className="mb-4 text-[18px] font-medium text-[#3C3950] dark:dark:text-secondary text-[#5F727F]">
+                      <ul className="flex flex-col mx-auto   dark:dark:text-secondary text-[#5F727F] gap-y-2  p-6 ">
+                        <h1 className="mb-4 text-[18px] font-medium  dark:dark:text-secondary text-[#5F727F]">
                           Available Features
                         </h1>
                         {plan.features.map((feature, idx) => (
@@ -68,6 +70,12 @@ export default function Pricing() {
                                 <LazyLoadImage
                                   src="https://i.ibb.co/7bHfxtb/Icon-1.png"
                                   alt="Included"
+                                  className="dark:block hidden"
+                                />
+                                <LazyLoadImage
+                                  src="https://i.ibb.co/RYrwy4F/Icon-3.png"
+                                  alt="Included"
+                                  className="dark:hidden block"
                                 />
                                 <span className="text-[14px]">
                                   {feature.name}
@@ -78,6 +86,12 @@ export default function Pricing() {
                                 <LazyLoadImage
                                   src="https://i.ibb.co/4tj5SLF/Icon-2.png"
                                   alt="Not Included"
+                                  className="dark:block hidden"
+                                />
+                                <LazyLoadImage
+                                  src="https://i.ibb.co/tmMhJnn/Icon-4.png"
+                                  alt="Not Included"
+                                  className="dark:hidden block"
                                 />
                                 <span className="text-[14px] line-through">
                                   {feature.name}

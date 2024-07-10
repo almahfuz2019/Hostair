@@ -6,7 +6,7 @@ import WhatWeDo from "../Components/About/WhatWeDo";
 
 export default function AboutPage() {
   return (
-    <div className="dark:bg-black bg-white">
+    <div className=" ">
       <Helmet>
         <title>About</title>
       </Helmet>

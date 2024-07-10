@@ -48,7 +48,7 @@ export default function UsersReview() {
       <div className="max-w-[1120px] mx-auto">
         <div className="flex mx-4   gap-20 justify-end md:justify-between  relative z-20">
           <div className="md:block hidden">
-            <p className=" text-xl">Testimonial</p>
+            <p className=" text-xl text-primary">Testimonial</p>
             <h1 className="text-[40px] rubik_font leading-tight primary-text font-medium mb-4 mt-1">
               Our Client’s Feedback
             </h1>
@@ -83,7 +83,7 @@ export default function UsersReview() {
         {testimonials.map((testimonial, index) => (
           <div className="mx-auto " key={index}>
             <div
-              className="dark:user-review-bg-color bg-[#FFF5F6] text-white rounded-lg p-6 max-w-[94%] shadow-lg"
+              className="user-review-bg-color  text-white rounded-lg p-6 max-w-[94%] shadow-lg"
               style={{ padding: "20px", margin: "0 15px" }} // Added margin
             >
               <div className="flex  items-center mb-4">
@@ -140,11 +140,11 @@ export default function UsersReview() {
           </div>
         ))}
       </Slider>
-      <LazyLoadImage
-        className="absolute bg-cover sm:w-20 sm:h-2/3  lg:w-auto  z-10 right-0 top-1/2 transform -translate-y-1/2 hidden md:block"
+      {/* <LazyLoadImage
+        className="absolute   sm:w-20 sm:h-2/3  lg:w-auto  z-10 right-0 top-1/2 transform  -translate-y-1/2 dark:hidden hidden dark:md:block "
         src="https://i.ibb.co/DkLzL2g/Rectangle-167.png"
         alt="Right Shadow"
-      />
+      /> */}
     </div>
   );
 }

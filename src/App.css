@@ -17,6 +17,8 @@ body {
     background-image: url("https://i.ibb.co/3ChSW0j/mobile.png");
     background-position: top;
     background-repeat: no-repeat;
+    z-index: 100;
+    position: relative;
   }
 }
 
@@ -27,16 +29,30 @@ body {
     background-repeat: no-repeat;
     /* background-size: contain; */
     background-image: url("https://i.ibb.co/56hWDVQ/mobile.png");
+    z-index: 100;
+    position: relative;
   }
 }
 
 /* PC */
 @media (min-width: 1024px) {
-  body {
+  .dark body {
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("https://i.ibb.co/2WXn8zp/background-pattern.png");
+    z-index: 100;
+    position: relative;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("https://i.ibb.co/PFQRRb5/background-pattern.png");
+    z-index: 100;
+    position: relative;
   }
 }
 /* fonts  */
@@ -48,11 +64,18 @@ body {
 }
 
 /* for templats section  */
-.pattern {
+.dark .pattern {
+
   background-image: url("https://i.ibb.co/mzkdQVz/pattern-1.png");
   background-position: top;
   background-repeat: no-repeat;
 }
+.pattern {
+  background-position: top;
+  background-repeat: no-repeat;
+    background-image: url("https://i.ibb.co/PFQRRb5/background-pattern.png");
+   
+  }
 /* waht we do  (pattern Image )*/
 .pattern5 {
   background-image: url("https://i.ibb.co/T0CZrbC/background-pattern-1.png");
@@ -77,11 +100,11 @@ body {
 }
 
 .lighting {
-  position: absolute; /* Ensures it does not affect other content layout */
-  width: 100%; /* Cover the full width */
-  height: 100%; /* Cover the full height */
-  top: 0; /* Position it at the top */
-  left: 0; /* Position it at the left */
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  left: 0;
   background-image: url("https://i.ibb.co/FwQLdpY/sport-lights.png");
   background-size: contain;
   background-position: center top;
@@ -131,10 +154,14 @@ html {
   background: linear-gradient(#26262c, #46464b) !important;
 }
 /* primary text  */
-.primary-text {
+.dark .primary-text {
   background: linear-gradient(to right, #ffffffcc, #6d7580);
   -webkit-background-clip: text;
   color: transparent;
+  padding-bottom:13px;
+}
+.primary-text {
+  color: #3c3950;
 }
 
 .primary-border {
@@ -192,8 +219,12 @@ html {
 }
 
 /* user review  */
-.user-review-bg-color {
+.dark .user-review-bg-color {
   background: linear-gradient(#2b2b2e, #131316);
+  border: 0.25px solid #f5f5f547;
+}
+.user-review-bg-color {
+  background-color: #fff5f6;
   border: 0.25px solid #f5f5f547;
 }
 

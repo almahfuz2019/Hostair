@@ -14,7 +14,7 @@ export default function FAQ() {
           {/* FAQ Header  */}
           <div className="mb-8 lg:mb-0">
             <p className="font-normal text-xl text-primary">FAQ</p>
-            <h1 className="font-medium rubik_font text-[40px] leading-tight dark:primary-text mb-5">
+            <h1 className="font-medium rubik_font text-[40px] leading-tight primary-text mb-5">
               Frequently asked questions
             </h1>
             <p className="text-[18px] font-normal dark:text-secondary text-[#5F727F]">

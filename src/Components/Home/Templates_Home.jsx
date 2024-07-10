@@ -28,7 +28,7 @@ export default function Templates_Home() {
                     className="mx-auto   text-center flex flex-col card-container"
                     data-aos="fade-up"
                   >
-                    <div className="dark:bg-[#212327] bg-[#FFF5F6] px-6 border dark:border-[#f5f5f547] border-[#EB304D] rounded-2xl hover:border-primary">
+                    <div className="dark:bg-[#212327] bg-[#FFF5F6] px-6 border dark:hover:border-primary hover:border-primary dark:border-[#f5f5f547] border-[#eb304c56] rounded-2xl ">
                       <LazyLoadImage
                         src={template.images[0]} // Assuming first image as template image
                         className="rounded-2xl border-[2px] border-transparent bg-back"

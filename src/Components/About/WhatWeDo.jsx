@@ -1,32 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useDarkModeObserver } from "../Hooks/UseDarkModeObserver";
+import { images } from "../../../public/WhatWeDo";
 
 export default function WhatWeDo() {
+  const isDarkMode = useDarkModeObserver();
+  const [visibleContacts, setVisibleContacts] = useState([]);
+
   // Initialize AOS library
   React.useEffect(() => {
     AOS.init({ duration: 1000, once: true }); // Initialize AOS with a duration and once flag
   }, []);
-  // images
-  const images = [
-    {
-      src: "https://i.ibb.co/YkDYLrg/Group-6.png",
-      alt: "Group 6",
-    },
-    {
-      src: "https://i.ibb.co/cCKgRLT/Group-4.png",
-      alt: "Group 5",
-    },
-    {
-      src: "https://i.ibb.co/wzn5B0V/Group-3.png",
-      alt: "Group 4",
-    },
-    {
-      src: "https://i.ibb.co/Gc24mVM/Group-5.png",
-      alt: "Group 3",
-    },
-  ];
+ 
+  useEffect(() => {
+    if (isDarkMode) {
+      setVisibleContacts(images.slice(0, 4)); // First 3 items
+    } else {
+      setVisibleContacts(images.slice(4, 8)); // Second 3 items
+    }
+  }, [isDarkMode]);
   return (
     <div className="pattern5">
       <section className="max-w-[1120px] mx-auto pt-24 px-4 ">
@@ -46,10 +40,10 @@ export default function WhatWeDo() {
             className="justify-center grid grid-cols-2 md:grid-cols-4 lg:flex flex-col gap-4 w-full"
             data-aos="zoom-in-right"
           >
-            {images.map((image, index) => (
+            {visibleContacts.map((image, index) => (
               <LazyLoadImage
                 key={index}
-                className=" hover:scale-105 transition-transform duration-300 rounded-md hover:border-primary hover:border"
+                className=" hover:scale-105 transition-transform duration-300 rounded-md dark:hover:border-primary hover:border-[#D8D8D8] hover:border"
                 src={image.src}
                 alt={image.alt}
               />

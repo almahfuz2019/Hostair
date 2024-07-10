@@ -14,7 +14,7 @@ export default function TemplateDetails() {
   }
 
   return (
-    <div className="max-w-[1120px] dark:bg-black bg-white mx-auto">
+    <div className="max-w-[1120px]   mx-auto">
       <Helmet>
         <title>{template.templateName}</title>
       </Helmet>
@@ -23,14 +23,14 @@ export default function TemplateDetails() {
         <header className=" " data-aos="fade-down">
           {/* breadcrumb section  */}
           <header className="pt-24" data-aos="fade-down">
-            <div className="flex justify-between md:items-center items-end">
+            <div className="flex justify-between md:items-center items-end ">
               <h1 className="text-4xl md:text-[56px] rubik_font font-medium primary-text flex">
                 <span className="lg:hidden block">{template.templateName}</span>
                 <span className="hidden lg:block">{template.templateName}</span>
               </h1>
               <p className="text-[#9CA0AB]   hidden text-base md:text-[26px] font-normal md:flex">
                 Home / <span className="lg:block hidden">All templates / </span>
-                <span className="light:text-primary dark:text-primary ml-2">
+                <span className="light:text-primary text-primary ml-2">
                   Template
                 </span>
               </p>
@@ -50,7 +50,7 @@ export default function TemplateDetails() {
 
         {/* Main Content Section */}
         <main className="mx-auto grid md:grid-cols-2 grid-cols-1 justify-center pt-16 pb-24 md:pt-24 md:pb-24 gap-20 md:gap-12 lg:gap-20">
-          <div className="bg-[#212327] p-4 lg:p-7 rounded-2xl border-[0.5px] border-[#F5F5F5] order-2 md:order-1">
+          <div className="bg-[#FFF5F6] dark:bg-[#212327] p-4 lg:p-7 rounded-2xl border-[0.5px] border-[#EB304D] dark:border-[#F5F5F5] order-2 md:order-1">
             <LazyLoadImage
               src={template.images[2]} // Assuming the third image as template image
               alt="Template Image"

@@ -26,11 +26,11 @@ export default function OurTeam() {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="p-4 lg:w-1/2 lg:hover:dark:bg-[#212327] "
+              className="p-4 lg:w-1/2 lg:hover:dark:bg-[#212327] lg:hover:bg-[#98a2b31b] "
               data-aos="fade-up"
               data-aos-duration="1000"
             >
-              <div className="h-full flex  lg:flex-row flex-col items-center lg:justify-start justify-center text-center lg:text-left hover:shadow-lg transition duration-300 ease-in-out transform  hover:-translate-y-1">
+              <div className="h-full flex  lg:flex-row flex-col items-center lg:justify-start justify-center text-center lg:text-left  transition duration-300 ease-in-out transform  hover:-translate-y-1">
                 <LazyLoadImage
                   alt={member.name}
                   className="flex-shrink-0 w-48 h-48 object-cover object-center sm:mb-0 mb-4"
@@ -57,7 +57,12 @@ export default function OurTeam() {
                         <LazyLoadImage
                           src={social.iconUrl}
                           alt="Social Icon"
-                          className="w-6 h-6"
+                          className="w-6 h-6 dark:block hidden"
+                        />
+                        <LazyLoadImage
+                          src={social.lightModeIconUrl}
+                          alt="Social Icon"
+                          className="w-6 h-6 dark:hidden block"
                         />
                       </a>
                     ))}

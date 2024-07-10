@@ -34,7 +34,7 @@ export default function Footer() {
       {/* Subscription Form */}
       <div className=" px-4 -mb-20 max-w-xl   relative z-20 mx-auto ">
         <div
-          className="text-center bg-[#EB304D] dark:bg-[#1c1c1e] px-8 py-12 rounded-md"
+          className="text-center bg-[#EB304D] dark:bg-[#1c1c1e] px-8 py-12 rounded-md shadow-lg"
           data-aos="fade-up"
         >
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -42,7 +42,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email here . . ."
-                className="p-4 w-full max-w-[400px] bg-[#FFFFFF] dark:bg-[#2b2b2e] text-white placeholder-gray-500 rounded-l-md focus:outline-none"
+                className="p-4 w-full max-w-[400px] bg-[#FFFFFF] dark:bg-[#2b2b2e] text-black dark:text-white placeholder-gray-500 rounded-l-md focus:outline-none "
                 {...register("email", { required: true })}
               />
               <button
@@ -54,7 +54,7 @@ export default function Footer() {
             </div>
           </form>
           {isSubmitted && (
-            <p className="text-green-500 mt-6 text-xl md:text-2xl font-light">
+            <p className="dark:text-green-500 text-white mt-6 text-xl md:text-2xl font-light">
               Subscription successful!
             </p>
           )}
@@ -128,34 +128,34 @@ export default function Footer() {
           {[
             {
               links: [
-                { name: "Customer Care", to: "" },
-                { name: "Clients Reviews", to: "" },
-                { name: "Warranty Policy", to: "" },
-                { name: "Return and Exchange", to: "" },
+                { name: "Customer Care", to: "#" },
+                { name: "Clients Reviews", to: "#" },
+                { name: "Warranty Policy", to: "#" },
+                { name: "Return and Exchange", to: "#" },
               ],
             },
             {
               links: [
                 { name: "About Us", to: "/about" },
                 { name: "Pricing", to: "/pricing" },
-                { name: "Careers", to: "" },
-                { name: "Terms of Services", to: "" },
+                { name: "Careers", to: "#" },
+                { name: "Terms of Services", to: "#" },
               ],
             },
             {
               links: [
-                { name: "FAQs", to: "" },
-                { name: "Privacy Policy", to: "" },
-                { name: "Our Locations", to: "" },
-                { name: "Shopping Guide", to: "" },
+                { name: "FAQs", to: "/about" },
+                { name: "Privacy Policy", to: "#" },
+                { name: "Our Locations", to: "#" },
+                { name: "Shopping Guide", to: "#" },
               ],
             },
             {
               links: [
-                { name: "Reports", to: "" },
-                { name: "Company Profile", to: "" },
-                { name: "Payment", to: "" },
-                { name: "News and Events", to: "" },
+                { name: "Reports", to: "#" },
+                { name: "Company Profile", to: "#" },
+                { name: "Payment", to: "#" },
+                { name: "News and Events", to: "#" },
               ],
             },
           ].map((section, index) => (

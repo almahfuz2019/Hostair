@@ -58,7 +58,7 @@ export default function FAQ_About() {
           {faqs.map((faq, index) => (
             <div
               key={faq.id}
-              className="collapse collapse-plus dark:bg-[#212327] bg-[#3C3950] primary-border rounded-[12px]"
+              className="collapse collapse-plus dark:bg-[#212327] bg-[#EB304D]  dark:border-[#f5f5f547] border-[#EB304D] border rounded-[12px]"
               data-aos="fade-up"
             >
               <input
@@ -67,11 +67,11 @@ export default function FAQ_About() {
                 name="faq-accordion"
                 defaultChecked={index === 0}
               />
-              <div className="collapse-title text-xl font-medium text-[18px]  text-[#EEEEEE] ">
+              <div className="collapse-title text-xl font-medium text-[18px] text-[#EEEEEE]">
                 {faq.question}
               </div>
-              <div className="collapse-content dark:bg-white bg-[#7b788bb5]">
-                <p className="mt-3 text-[#EEEEEE] dark:text-gray-500">
+              <div className="collapse-content bg-white">
+                <p className="mt-3 text-[#5F727F] dark:text-gray-500">
                   {faq.answer}
                 </p>
               </div>

@@ -15,7 +15,7 @@ export default function FunFacts() {
         {/* Add group class here */}
         <div className="flex flex-col-reverse lg:flex-row justify-between">
           <div
-            className="lg:w-1/2 text-[#EEEEEE] py-10 lg:py-24 p-4"
+            className="lg:w-1/2 dark:text-[#EEEEEE] text-[#3C3950] py-10 lg:py-24 p-4"
             data-aos="fade-right"
           >
             <h1 className="text-[40px] rubik_font leading-tight font-medium mb-6">
@@ -25,7 +25,13 @@ export default function FunFacts() {
               {[...Array(4)].map((_, index) => (
                 <div className="flex items-center gap-4" key={index}>
                   <LazyLoadImage
+                    className="hidden dark:block"
                     src="https://i.ibb.co/HqP6jSb/icon.png"
+                    alt="icon"
+                  />
+                  <LazyLoadImage
+                    className="dark:hidden block"
+                    src="https://i.ibb.co/tmwFzP8/icon.png"
                     alt="icon"
                   />
                   <p className="text-[18px]">Lorem ipsum dolor sit amet</p>
@@ -50,13 +56,23 @@ export default function FunFacts() {
             </div>
           </div>
           <div
-            className="lg:w-1/2 ml-auto overflow-hidden"
+            className="lg:w-1/2 ml-auto overflow-hidden dark:block hidden"
             data-aos="fade-down"
           >
             <LazyLoadImage
               src="https://i.ibb.co/GTZn2FD/globe.png"
               alt="globe"
-              className="transition-transform zoom-animation duration-1000 ease-in-out group-hover:scale-105" // Fancy animation effect using Tailwind CSS group-hover
+              className=" transition-transform zoom-animation duration-1000 ease-in-out group-hover:scale-105" // Fancy animation effect using Tailwind CSS group-hover
+            />
+          </div>
+          <div
+            className="lg:w-1/2 ml-auto overflow-hidden dark:hidden block"
+            data-aos="fade-down"
+          >
+            <LazyLoadImage
+              src="https://i.ibb.co/MRQTDvC/globe-2.png"
+              alt="globe"
+              className=" transition-transform zoom-animation duration-1000 ease-in-out group-hover:scale-105" // Fancy animation effect using Tailwind CSS group-hover
             />
           </div>
         </div>

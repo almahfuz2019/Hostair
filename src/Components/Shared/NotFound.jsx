@@ -4,6 +4,7 @@ import "aos/dist/aos.css"; // Import the AOS CSS
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
 export default function NotFound() {
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function NotFound() {
         <Navbar />
         <div className="flex flex-col  h-screen justify-center items-center py-16 md:py-32">
           <h1
-            className="font-medium text-[40px] rubik_font leading-tight  text-center mb-14 md:mb-20  dark:primary-text text-[#3C3950] rubik_font"
+            className="font-medium text-[40px] rubik_font leading-tight  text-center mb-14 md:mb-20  primary-text rubik_font"
             data-aos="fade-up"
           >
             Opppsss, <br /> page not found
@@ -28,9 +29,21 @@ export default function NotFound() {
           <LazyLoadImage
             src="https://i.ibb.co/ZR9hHZv/Group-41.png"
             alt="Page not found"
-            className="px-10 "
+            className="px-10 dark:block hidden"
             data-aos="zoom-in"
           />
+          <LazyLoadImage
+            src="https://i.ibb.co/XLNSXKP/Group-41-1.png"
+            alt="Page not found"
+            className="px-10 block dark:hidden"
+            data-aos="zoom-in"
+          />
+          <Link
+            to="/"
+            className="text-base text-white bg-primary text-center px-[20px] py-[10px] md:px-[24px] md:py-[14px] rounded-md mt-10"
+          >
+            Back to home
+          </Link>
         </div>
       </div>
       <Footer />

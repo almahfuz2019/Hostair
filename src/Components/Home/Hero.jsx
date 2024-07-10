@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   const [centerImage, setCenterImage] = useState(
-    "https://i.ibb.co/yFdmV32/Group-20.png",
+    "https://i.ibb.co/RSy7tj9/Group-20.png",
   );
   const [lastHoveredImage, setLastHoveredImage] = useState(
     "https://i.ibb.co/gwHnXJ6/Group-20-1-1.png",
@@ -14,23 +14,27 @@ export default function Hero() {
   const images = [
     {
       src: "https://i.ibb.co/wzn5B0V/Group-3.png",
+      srcForLightMode: "https://i.ibb.co/fMtn4FP/Group-3-2.png",
       alt: "Website Templates",
-      centerImage: "https://i.ibb.co/RD2VXX0/Group-20-1.png",
+      centerImage: "https://i.ibb.co/dBgN8yW/Group-50.png",
     },
     {
       src: "https://i.ibb.co/cCKgRLT/Group-4.png",
+      srcForLightMode: "https://i.ibb.co/YPdFC2V/Group-4-3.png",
       alt: "Workflow Automation",
-      centerImage: "https://i.ibb.co/NWYrc8s/Group-20-2.png",
+      centerImage: "https://i.ibb.co/tCpsKXh/Group-51.png",
     },
     {
       src: "https://i.ibb.co/Gc24mVM/Group-5.png",
+      srcForLightMode: "https://i.ibb.co/xFB7KVk/Group-5-2.png",
       alt: "Contact Management",
-      centerImage: "https://i.ibb.co/wNrq9vV/Group-20-3.png",
+      centerImage: "https://i.ibb.co/Wyb84jX/Group-52.png",
     },
     {
       src: "https://i.ibb.co/YkDYLrg/Group-6.png",
+      srcForLightMode: "https://i.ibb.co/0m5yRn4/Group-6-2.png",
       alt: "E-mail Marketing",
-      centerImage: "https://i.ibb.co/LQ8hq1q/Group-20-4.png",
+      centerImage: "https://i.ibb.co/99dSVhT/Group-53.png",
     },
   ];
 
@@ -49,7 +53,7 @@ export default function Hero() {
 
   return (
     <div className="relative">
-      <div className="lighting"></div>{" "}
+      <div className="lighting hidden lg:block"></div>{" "}
       {/* This will ensure the lighting background is behind the content */}
       <div className="max-w-[1120px] mx-auto px-4 lg:px-0 lg:pb-24 -mt-36 pt-48 lg:pt-36">
         <section className="flex flex-col items-center py-12 lg:py-0">
@@ -88,7 +92,8 @@ export default function Hero() {
                 className="object-cover transition-transform duration-300 max-w-full"
               />
             </div>
-            <div className="grid grid-cols-4 md:grid-cols-4 items-center gap-4">
+            {/* for tab and phone  */}
+            <div className=" grid-cols-4 md:grid-cols-4 items-center gap-4 dark:grid hidden">
               {images.map((image, index) => (
                 <div
                   key={index}
@@ -100,6 +105,25 @@ export default function Hero() {
                 >
                   <LazyLoadImage
                     src={image.src}
+                    alt={image.alt}
+                    className="hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+            {/* light mode  */}
+            <div className="grid grid-cols-4 md:grid-cols-4 items-center gap-4 dark:hidden ">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(image)}
+                  onMouseLeave={handleMouseLeave}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 200}
+                >
+                  <LazyLoadImage
+                    src={image.srcForLightMode}
                     alt={image.alt}
                     className="hover:scale-105 transition-transform duration-300"
                   />
@@ -121,7 +145,12 @@ export default function Hero() {
                   <LazyLoadImage
                     src={image.src}
                     alt={image.alt}
-                    className="hover:scale-105 hover:border-primary hover:border rounded-lg transition-transform duration-300"
+                    className="hover:scale-105 hover:border-primary hover:border rounded-lg transition-transform duration-300 dark:block hidden"
+                  />
+                  <LazyLoadImage
+                    src={image.srcForLightMode}
+                    alt={image.alt}
+                    className="hover:scale-105 hover:border-primary hover:border rounded-lg transition-transform duration-300 block dark:hidden"
                   />
                 </div>
               ))}
@@ -150,7 +179,12 @@ export default function Hero() {
                   <LazyLoadImage
                     src={image.src}
                     alt={image.alt}
-                    className="hover:scale-105 hover:border-primary hover:border rounded-lg transition-transform duration-300"
+                    className="hover:scale-105 hover:border-primary hover:border rounded-lg transition-transform duration-300 dark:block hidden"
+                  />
+                  <LazyLoadImage
+                    src={image.srcForLightMode}
+                    alt={image.alt}
+                    className="hover:scale-105 hover:border-primary hover:border rounded-lg transition-transform duration-300 dark:hidden block"
                   />
                 </div>
               ))}
