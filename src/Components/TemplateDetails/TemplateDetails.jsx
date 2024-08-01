@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { AllTemplatesData } from "../../../public/Template"; // Importing your template data
 import { Helmet } from "react-helmet-async";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import line from "/assets/Dark/Line.png";
 export default function TemplateDetails() {
   const { name } = useParams(); // Get the template name from the URL params
   const template = AllTemplatesData.find(
@@ -35,11 +35,7 @@ export default function TemplateDetails() {
                 </span>
               </p>
             </div>
-            <LazyLoadImage
-              className="mt-6 mx-auto"
-              src="https://i.ibb.co/qr880bH/Line-1.png"
-              alt="Line"
-            />
+            <LazyLoadImage className="mt-6 mx-auto" src={line} alt="Line" />
           </header>
         </header>
         <LazyLoadImage

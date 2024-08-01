@@ -23,7 +23,7 @@ export default function Pricing() {
               {/* line Image  */}
               <LazyLoadImage
                 className="mt-6 mx-auto "
-                src="https://i.ibb.co/qr880bH/Line-1.png"
+                src="../../../public/assets/Dark/Line.png"
                 alt="Line"
               />
             </header>
@@ -68,12 +68,12 @@ export default function Pricing() {
                             {feature.included ? (
                               <>
                                 <LazyLoadImage
-                                  src="https://i.ibb.co/7bHfxtb/Icon-1.png"
+                                  src="../../../public/assets/Dark/Pricing/Dark/Icon1.png"
                                   alt="Included"
                                   className="dark:block hidden"
                                 />
                                 <LazyLoadImage
-                                  src="https://i.ibb.co/RYrwy4F/Icon-3.png"
+                                  src="../../../public/assets/Dark/Pricing/Icon1.png"
                                   alt="Included"
                                   className="dark:hidden block"
                                 />
@@ -84,12 +84,12 @@ export default function Pricing() {
                             ) : (
                               <>
                                 <LazyLoadImage
-                                  src="https://i.ibb.co/4tj5SLF/Icon-2.png"
+                                  src="../../../public/assets/Dark/Pricing/Dark/Icon-2.png"
                                   alt="Not Included"
                                   className="dark:block hidden"
                                 />
                                 <LazyLoadImage
-                                  src="https://i.ibb.co/tmMhJnn/Icon-4.png"
+                                  src="../../../public/assets/Dark/Pricing/Icon2.png"
                                   alt="Not Included"
                                   className="dark:hidden block"
                                 />

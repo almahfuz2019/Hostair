@@ -52,7 +52,7 @@ export default function Contact() {
         </div>
         <LazyLoadImage
           className="mt-6 mx-auto "
-          src="https://i.ibb.co/qr880bH/Line-1.png"
+          src="/assets/Dark/Line.png"
           alt="Line"
         />
       </header>
@@ -92,12 +92,12 @@ export default function Contact() {
             <div className="dark:bg-[#212327] text-center">
               <LazyLoadImage
                 className="mx-auto animate-pulse dark:block hidden"
-                src="https://i.ibb.co/FXHcjr8/Group-39.png"
+                src="/assets/Dark/Contact/Dark/success_icon.png"
                 alt="icon"
               />
               <LazyLoadImage
                 className="mx-auto animate-pulse dark:hidden block"
-                src="https://i.ibb.co/Y86DKWH/Group-39-1.png"
+                src="../../../public/assets/Dark/Contact/success_icon.png"
                 alt="icon"
               />
               <h1 className="font-medium rubik_font text-[20px] lg:text-[30px] dark:text-secondary text-[#5F727F]">
@@ -232,7 +232,9 @@ export default function Contact() {
                   />
                   <label
                     className={`font-medium ${
-                      termsAccepted ? "dark:text-white text-black" : "text-gray-400"
+                      termsAccepted
+                        ? "dark:text-white text-black"
+                        : "text-gray-400"
                     }`}
                   >
                     Accept our {/* The button to open modal */}

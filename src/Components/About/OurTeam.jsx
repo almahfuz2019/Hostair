@@ -52,7 +52,7 @@ export default function OurTeam() {
                       <a
                         key={social.id}
                         className=" text-gray-500 hover:text-gray-700 mr-4"
-                        href="#"
+                        href={social.socialMediaLink}
                       >
                         <LazyLoadImage
                           src={social.iconUrl}

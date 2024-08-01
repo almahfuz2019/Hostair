@@ -1,37 +1,37 @@
 export const contactData = [
   {
-    imgSrc: "https://i.ibb.co/d0xB1Zy/Group-36.png",
-    alt: "Call Us Icon 1",
+    imgSrc: "/assets/Dark/Contact/Dark/call_icon.png",
+    alt: "Call Us Icon",
     title: "Call Us",
     details: "0123 456 789",
   },
   {
-    imgSrc: "https://i.ibb.co/RS1BD6w/Group-36-1.png",
-    alt: "Email Us Icon 2",
+    imgSrc: "/assets/Dark/Contact/Dark/email_icon.png",
+    alt: "Email Us Icon",
     title: "Email Us",
     details: "Lorem@mail.com",
   },
   {
-    imgSrc: "https://i.ibb.co/2t7Z8qZ/Group-36-2.png",
-    alt: "Call Us Icon 3",
+    imgSrc: "/assets/Dark/Contact/Dark/location_icon.png",
+    alt: "Call Us Icon",
     title: "Location",
     details: "Toronto, Canada",
   },
   // for light theme
   {
-    imgSrc: "https://i.ibb.co/ZY7VHw6/Group-36-3.png",
+    imgSrc: "/assets/Dark/Contact/call_icon.png",
     alt: "Call Us Icon 1",
     title: "Call Us",
     details: "0123 456 789",
   },
   {
-    imgSrc: "https://i.ibb.co/wBdpQMf/Group-36-4.png",
+    imgSrc: "/assets/Dark/Contact/email_icon.png",
     alt: "Email Us Icon 2",
     title: "Email Us",
     details: "Lorem@mail.com",
   },
   {
-    imgSrc: "https://i.ibb.co/Nng0tM1/Group-36-5.png",
+    imgSrc: "/assets/Dark/Contact/location_icon.png",
     alt: "Call Us Icon 3",
     title: "Location",
     details: "Toronto, Canada",

@@ -35,13 +35,13 @@ const Navbar = () => {
                 <LazyLoadImage
                   effect="blur"
                   className="dark:block hidden"
-                  src="https://i.ibb.co/tQDm8Dd/logo-1.png"
+                  src="/assets/Dark/logo_navbar.png"
                   alt="logo"
                 />
                 <LazyLoadImage
                   effect="blur"
                   className="block dark:hidden max-w-[148px]"
-                  src="https://i.ibb.co/hR4g90y/logo-1.png"
+                  src="/assets/Dark/logo_navbar_lightMode.png"
                   alt="logo"
                 />
               </NavLink>

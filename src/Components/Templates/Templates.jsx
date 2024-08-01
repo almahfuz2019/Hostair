@@ -26,7 +26,7 @@ export default function Templates() {
           </div>
           <LazyLoadImage
             className="mt-6 mx-auto "
-            src="https://i.ibb.co/qr880bH/Line-1.png"
+            src="../../../public/assets/Dark/Line.png"
             alt="Line"
           />
         </header>

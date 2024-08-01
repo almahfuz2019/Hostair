@@ -2,39 +2,35 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Link } from "react-router-dom";
-
-export default function Hero() {
-  const [centerImage, setCenterImage] = useState(
-    "https://i.ibb.co/RSy7tj9/Group-20.png",
-  );
+import { Link } from "react-router-dom";export default function Hero() {
+  const [centerImage, setCenterImage] = useState("/assets/Dark/Default_pc.png");
   const [lastHoveredImage, setLastHoveredImage] = useState(
-    "https://i.ibb.co/gwHnXJ6/Group-20-1-1.png",
+    "../../../public/assets/Dark/Default_pc.png",
   );
   const images = [
     {
-      src: "https://i.ibb.co/wzn5B0V/Group-3.png",
-      srcForLightMode: "https://i.ibb.co/fMtn4FP/Group-3-2.png",
+      src: "/assets/Dark/Website_Template.png",
+      srcForLightMode: "/assets/Dark/Home/Website_Template.png",
       alt: "Website Templates",
-      centerImage: "https://i.ibb.co/dBgN8yW/Group-50.png",
+      centerImage: "/assets/Dark/Wbdsite_Template_pc.png",
     },
     {
-      src: "https://i.ibb.co/cCKgRLT/Group-4.png",
-      srcForLightMode: "https://i.ibb.co/YPdFC2V/Group-4-3.png",
+      src: "/assets/Dark/Workflow_Automation.png",
+      srcForLightMode: "/assets/Dark/Home/Workflow_Automation.png",
       alt: "Workflow Automation",
-      centerImage: "https://i.ibb.co/tCpsKXh/Group-51.png",
+      centerImage: "/assets/Dark/Workflow_Automation_pc.png",
     },
     {
-      src: "https://i.ibb.co/Gc24mVM/Group-5.png",
-      srcForLightMode: "https://i.ibb.co/xFB7KVk/Group-5-2.png",
+      src: "/assets/Dark/Contact_Management.png",
+      srcForLightMode: "/assets/Dark/Home/Workflow_Automation.png",
       alt: "Contact Management",
-      centerImage: "https://i.ibb.co/Wyb84jX/Group-52.png",
+      centerImage: "/assets/Dark/Contact_Management_pc.png",
     },
     {
-      src: "https://i.ibb.co/YkDYLrg/Group-6.png",
-      srcForLightMode: "https://i.ibb.co/0m5yRn4/Group-6-2.png",
+      src: "/assets/Dark/E-mail_Marketing.png",
+      srcForLightMode: "/assets/Dark/Home/E-mail_Marketing.png",
       alt: "E-mail Marketing",
-      centerImage: "https://i.ibb.co/99dSVhT/Group-53.png",
+      centerImage: "/assets/Dark/E-mail_Marketing_pc.png",
     },
   ];
 

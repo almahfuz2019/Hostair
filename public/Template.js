@@ -4,9 +4,9 @@ export const AllTemplatesData = [
     templateName: "Modern Elegance",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -46,9 +46,9 @@ export const AllTemplatesData = [
     templateName: "Vintage Charm",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -88,9 +88,9 @@ export const AllTemplatesData = [
     templateName: "Urban Vibes",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -129,9 +129,9 @@ export const AllTemplatesData = [
     templateName: "Nature Bliss",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -171,9 +171,9 @@ export const AllTemplatesData = [
     templateName: "Tech Innovator",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -212,9 +212,9 @@ export const AllTemplatesData = [
     templateName: "Elegant Minimal",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -253,9 +253,9 @@ export const AllTemplatesData = [
     templateName: "Artistic Flair",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -295,9 +295,9 @@ export const AllTemplatesData = [
     templateName: "Corporate Pro",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -336,9 +336,9 @@ export const AllTemplatesData = [
     templateName: "Fashion Forward",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -378,9 +378,9 @@ export const AllTemplatesData = [
     templateName: "Travel Explorer",
     mode: "Light mode",
     images: [
-      "https://i.ibb.co/XyYYzPY/Group-25.png",
-      "https://i.ibb.co/wp0Y847/Mask-group.png",
-      "https://i.ibb.co/vmpNnZG/realtor-3-3.png",
+      "/assets/Dark/Template1/Template1_Thumbnail.png",
+      "/assets/Dark/Template1/Template1_banner.png",
+      "/assets/Dark/Template1/Template1_HomePage.png",
     ],
     overview: {
       title: "Overview",

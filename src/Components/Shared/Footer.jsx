@@ -70,7 +70,7 @@ export default function Footer() {
           {/* Company Info Section */}
           <aside className="lg:w-[20%] mb-8 lg:mb-0" data-aos="fade-up">
             <LazyLoadImage
-              src="https://i.ibb.co/tQDm8Dd/logo-1.png"
+              src="/assets/Dark/logo_navbar.png"
               alt="logo"
             />
             <p className="text-base my-8 text-[#F8F8F8]">
@@ -83,7 +83,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <LazyLoadImage
-                  src="https://i.ibb.co/gt8rjhc/instagram.png"
+                  src="/assets/Dark/instagram.png"
                   alt="Instagram"
                   className="hover:scale-110 transition-transform duration-300"
                 />
@@ -94,7 +94,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <LazyLoadImage
-                  src="https://i.ibb.co/W26RzLK/youtube.png"
+                  src="/assets/Dark/youtube.png"
                   alt="YouTube"
                   className="hover:scale-110 transition-transform duration-300"
                 />
@@ -105,7 +105,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <LazyLoadImage
-                  src="https://i.ibb.co/9ZX79gS/linkedin.png"
+                  src="/assets/Dark/linkedin.png"
                   alt="LinkedIn"
                   className="hover:scale-110 transition-transform duration-300"
                 />
@@ -116,7 +116,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <LazyLoadImage
-                  src="https://i.ibb.co/b3hCqf6/facebook.png"
+                  src="/assets/Dark/facebook.png"
                   alt="Facebook"
                   className="hover:scale-110 transition-transform duration-300"
                 />

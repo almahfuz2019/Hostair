@@ -35,7 +35,7 @@ export default function Advertisement_Services() {
             <span>
               <LazyLoadImage
                 className="h-[14px] w-auto "
-                src="https://i.ibb.co/883cSb7/Group-24.png"
+                src="/assets/Dark/button_arrow.png"
                 alt="More"
               />
             </span>
@@ -47,12 +47,12 @@ export default function Advertisement_Services() {
           data-aos="fade-left"
         >
           <LazyLoadImage
-            src="https://i.ibb.co/m9Hcj2X/Group-48.png"
+            src="/assets/Dark/Services_Image.png"
             className="rounded-2xl pt-8  dark:block hidden"
             alt="Templates"
           />
           <LazyLoadImage
-            src="https://i.ibb.co/9WsH7Z7/Group-49.png"
+            src="../../../public/assets/Dark/Home/Services_Image.png"
             className="rounded-2xl pt-8  block dark:hidden sm:max-w-[445px]"
             alt="Templates"
           />

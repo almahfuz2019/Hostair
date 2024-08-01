@@ -59,19 +59,13 @@ export default function UsersReview() {
               onClick={previous}
               className="bg-primary text-white p-2 rounded shadow-lg"
             >
-              <LazyLoadImage
-                src="https://i.ibb.co/kQ5P80Q/Group-45.png"
-                alt="Prev"
-              />
+              <LazyLoadImage src="/assets/Dark/left_arrow.png" alt="Prev" />
             </button>
             <button
               onClick={next}
               className="bg-primary text-white p-2 rounded shadow-lg"
             >
-              <LazyLoadImage
-                src="https://i.ibb.co/j5HqswQ/Group-45-1.png"
-                alt="Next"
-              />
+              <LazyLoadImage src="/assets/Dark/right_Arrow.png" alt="Next" />
             </button>
           </div>
         </div>
@@ -88,24 +82,21 @@ export default function UsersReview() {
             >
               <div className="flex  items-center mb-4">
                 <div className="flex text-yellow-400 space-x-1">
+                  <LazyLoadImage src="/assets/Dark/Star.png" alt="Star" />
                   <LazyLoadImage
-                    src="https://i.ibb.co/grCpcBY/Star.png"
+                    src="/assets/Dark/Star.png"
                     alt="Star"
                   />
                   <LazyLoadImage
-                    src="https://i.ibb.co/grCpcBY/Star.png"
+                    src="/assets/Dark/Star.png"
                     alt="Star"
                   />
                   <LazyLoadImage
-                    src="https://i.ibb.co/grCpcBY/Star.png"
+                    src="/assets/Dark/Star.png"
                     alt="Star"
                   />
                   <LazyLoadImage
-                    src="https://i.ibb.co/grCpcBY/Star.png"
-                    alt="Star"
-                  />
-                  <LazyLoadImage
-                    src="https://i.ibb.co/grCpcBY/Star.png"
+                    src="/assets/Dark/Star.png"
                     alt="Star"
                   />
                 </div>
@@ -131,7 +122,7 @@ export default function UsersReview() {
                 </div>
                 <div className="ml-auto text-red-500 text-2xl ">
                   <LazyLoadImage
-                    src="https://i.ibb.co/SyQT2fV/Quotes.png"
+                    src="/assets/Dark/Quotes.png"
                     alt="Quotes"
                   />
                 </div>

@@ -27,13 +27,13 @@ export default function NotFound() {
             Opppsss, <br /> page not found
           </h1>
           <LazyLoadImage
-            src="https://i.ibb.co/ZR9hHZv/Group-41.png"
+            src="/assets/Dark/Not_Found_Page/Dark/image.png"
             alt="Page not found"
             className="px-10 dark:block hidden"
             data-aos="zoom-in"
           />
           <LazyLoadImage
-            src="https://i.ibb.co/XLNSXKP/Group-41-1.png"
+            src="../../../public/assets/Dark/Not_Found_Page/Image.png"
             alt="Page not found"
             className="px-10 block dark:hidden"
             data-aos="zoom-in"

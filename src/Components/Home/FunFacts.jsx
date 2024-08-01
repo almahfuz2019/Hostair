@@ -26,12 +26,12 @@ export default function FunFacts() {
                 <div className="flex items-center gap-4" key={index}>
                   <LazyLoadImage
                     className="hidden dark:block"
-                    src="https://i.ibb.co/HqP6jSb/icon.png"
+                    src="/assets/Dark/Tik_Mark.png"
                     alt="icon"
                   />
                   <LazyLoadImage
                     className="dark:hidden block"
-                    src="https://i.ibb.co/tmwFzP8/icon.png"
+                    src="../../../public/assets/Dark/Home/Tik_Mark.png"
                     alt="icon"
                   />
                   <p className="text-[18px]">Lorem ipsum dolor sit amet</p>
@@ -60,7 +60,7 @@ export default function FunFacts() {
             data-aos="fade-down"
           >
             <LazyLoadImage
-              src="https://i.ibb.co/GTZn2FD/globe.png"
+              src="/assets/Dark/globe.png"
               alt="globe"
               className=" transition-transform zoom-animation duration-1000 ease-in-out group-hover:scale-105" // Fancy animation effect using Tailwind CSS group-hover
             />
@@ -70,7 +70,7 @@ export default function FunFacts() {
             data-aos="fade-down"
           >
             <LazyLoadImage
-              src="https://i.ibb.co/MRQTDvC/globe-2.png"
+              src="../../../public/assets/Dark/Home/globe.png"
               alt="globe"
               className=" transition-transform zoom-animation duration-1000 ease-in-out group-hover:scale-105" // Fancy animation effect using Tailwind CSS group-hover
             />

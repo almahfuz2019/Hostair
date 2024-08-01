@@ -36,7 +36,7 @@ const toggleTheme = () => {
               <div className="flex-shrink-0">
                 <Link to="/" className="flex items-center ">
                   <LazyLoadImage
-                    src="https://i.ibb.co/tQDm8Dd/logo-1.png"
+                    src="../../../public/assets/Dark/logo_for_phone.png"
                     className=""
                     alt=" Logo"
                   />

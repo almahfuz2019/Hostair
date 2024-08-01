@@ -15,7 +15,7 @@ export default function Hero_about() {
         </div>
         <LazyLoadImage
           className="mt-6 mx-auto"
-          src="https://i.ibb.co/qr880bH/Line-1.png"
+          src="../../../public/assets/Dark/Line.png"
           alt="Line"
         />
       </header>
@@ -25,7 +25,7 @@ export default function Hero_about() {
         <div className="flex justify-start pt-24">
           <LazyLoadImage
             className="max-h-[526px] w-auto rounded-2xl"
-            src="https://i.ibb.co/68BmvLX/ab9ae2c4d3adb4a13d574252caa7f0ff.jpg"
+            src="../../../public/assets/Dark/about_page_banner.png"
             alt=""
             data-aos="fade-up"
           />

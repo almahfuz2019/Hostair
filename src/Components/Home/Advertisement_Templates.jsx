@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
-
 export default function Advertisement_Templates() {
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
@@ -16,12 +15,12 @@ export default function Advertisement_Templates() {
           {/* image  */}
           <div className="relative mx-auto" data-aos="fade-right">
             <LazyLoadImage
-              src="https://i.ibb.co/ZV3LnxC/Frame-26.png"
+              src="/assets/Dark/Templates_Image.png"
               className="rounded-2xl  transition-transform duration-1000 ease-in-out transform dark:block hidden" // Fancy animation effect
               alt="Templates"
             />
             <LazyLoadImage
-              src="https://i.ibb.co/pZYdQxC/Frame-27.png"
+              src="../../../public/assets/Dark/Home/Templates_Image.png"
               className="rounded-2xl  transition-transform duration-1000 ease-in-out transform block dark:hidden sm:max-w-[445px]" // Fancy animation effect
               alt="Templates"
             />
@@ -49,7 +48,7 @@ export default function Advertisement_Templates() {
               <span>
                 <LazyLoadImage
                   className="h-[14px] w-auto"
-                  src="https://i.ibb.co/883cSb7/Group-24.png"
+                  src="/assets/Dark/button_arrow.png"
                   alt="More"
                 />
               </span>
