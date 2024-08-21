@@ -4,9 +4,9 @@ export const AllTemplatesData = [
     templateName: "Modern Elegance",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template1/Template_Thumbnail.png",
+      "/assets/Dark/Template1/Template_banner.png",
+      "/assets/Dark/Template1/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -40,15 +40,16 @@ export const AllTemplatesData = [
       "Customer Support",
       "Detailed Documentation",
     ],
+    liveLink: "https://single-realtor-1.vercel.app/",
   },
   {
     id: 2,
     templateName: "Vintage Charm",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template2/Template_Thumbnail.png",
+      "/assets/Dark/Template2/Template_banner.png",
+      "/assets/Dark/Template2/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -82,15 +83,16 @@ export const AllTemplatesData = [
       "Comprehensive Documentation",
       "Regular Updates",
     ],
+    liveLink: "https://single-realtor-2.vercel.app/",
   },
   {
     id: 3,
     templateName: "Urban Vibes",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template3/Template_Thumbnail.png",
+      "/assets/Dark/Template3/Template_banner.png",
+      "/assets/Dark/Template3/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -123,15 +125,16 @@ export const AllTemplatesData = [
       "Optimized for Speed",
       "Regular Updates",
     ],
+    liveLink: "https://signle-realtor-3.vercel.app/",
   },
   {
     id: 4,
     templateName: "Nature Bliss",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template4/Template_Thumbnail.png",
+      "/assets/Dark/Template4/Template_banner.png",
+      "/assets/Dark/Template4/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -165,15 +168,16 @@ export const AllTemplatesData = [
       "Customer Support",
       "Detailed Documentation",
     ],
+    liveLink: "https://single-realtor-4.vercel.app/",
   },
   {
     id: 5,
     templateName: "Tech Innovator",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template5/Template_Thumbnail.png",
+      "/assets/Dark/Template5/Template_banner.png",
+      "/assets/Dark/Template5/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -206,15 +210,16 @@ export const AllTemplatesData = [
       "Optimized for Speed",
       "Regular Updates",
     ],
+    liveLink: "https://single-realtor-5.vercel.app/",
   },
   {
     id: 6,
     templateName: "Elegant Minimal",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template6/Template_Thumbnail.png",
+      "/assets/Dark/Template6/Template_banner.png",
+      "/assets/Dark/Template6/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -247,15 +252,16 @@ export const AllTemplatesData = [
       "Optimized for Speed",
       "Regular Updates",
     ],
+    liveLink: "https://single-realtor-6.vercel.app/",
   },
   {
     id: 7,
     templateName: "Artistic Flair",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template7/Template_Thumbnail.png",
+      "/assets/Dark/Template7/Template_banner.png",
+      "/assets/Dark/Template7/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -289,15 +295,16 @@ export const AllTemplatesData = [
       "Optimized for Speed",
       "Regular Updates",
     ],
+    liveLink: "https://single-realtor-7.vercel.app/",
   },
   {
     id: 8,
     templateName: "Corporate Pro",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template8/Template_Thumbnail.png",
+      "/assets/Dark/Template8/Template_banner.png",
+      "/assets/Dark/Template8/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -330,15 +337,16 @@ export const AllTemplatesData = [
       "Optimized for Speed",
       "Regular Updates",
     ],
+    liveLink: "https://single-realtor-8.vercel.app/",
   },
   {
     id: 9,
     templateName: "Fashion Forward",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template9/Template_Thumbnail.png",
+      "/assets/Dark/Template9/Template_banner.png",
+      "/assets/Dark/Template9/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -372,15 +380,16 @@ export const AllTemplatesData = [
       "Optimized for Speed",
       "Regular Updates",
     ],
+    liveLink: "https://single-realtor-9.vercel.app/",
   },
   {
     id: 10,
     templateName: "Travel Explorer",
     mode: "Light mode",
     images: [
-      "/assets/Dark/Template1/Template1_Thumbnail.png",
-      "/assets/Dark/Template1/Template1_banner.png",
-      "/assets/Dark/Template1/Template1_HomePage.png",
+      "/assets/Dark/Template10/Template_Thumbnail.png",
+      "/assets/Dark/Template10/Template_banner.png",
+      "/assets/Dark/Template10/Template_HomePage.png",
     ],
     overview: {
       title: "Overview",
@@ -413,5 +422,6 @@ export const AllTemplatesData = [
       "Optimized for Speed",
       "Regular Updates",
     ],
+    liveLink: "https://single-realtor-10.vercel.app/",
   },
 ];

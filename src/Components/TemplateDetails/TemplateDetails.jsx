@@ -1,52 +1,62 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { AllTemplatesData } from "../../../public/Template"; // Importing your template data
 import { Helmet } from "react-helmet-async";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import line from "/assets/Dark/Line.png";
+import { useState } from "react";
+
 export default function TemplateDetails() {
   const { name } = useParams(); // Get the template name from the URL params
   const template = AllTemplatesData.find(
     (t) => t.templateName.toLowerCase() === name.toLowerCase(),
   ); // Find the template object based on name
 
+  const [modalState, setModalState] = useState({
+    pc: false,
+    phone: false,
+  });
+
+  const openModal = (deviceType) => {
+    setModalState({ ...modalState, [deviceType]: true });
+  };
+
+  const closeModal = (deviceType) => {
+    setModalState({ ...modalState, [deviceType]: false });
+  };
+
   if (!template) {
     return <div>Template not found</div>; // Handle case where template is not found
   }
 
   return (
-    <div className="max-w-[1120px]   mx-auto">
+    <div className="max-w-[1120px] mx-auto">
       <Helmet>
         <title>{template.templateName}</title>
       </Helmet>
+
       <div className="text-secondary mx-4">
-        {/* breadcrumb section with logic  */}
-        <header className=" " data-aos="fade-down">
-          {/* breadcrumb section  */}
-          <header className="pt-24" data-aos="fade-down">
-            <div className="flex justify-between md:items-center items-end ">
-              <h1 className="text-4xl md:text-[56px] rubik_font font-medium primary-text flex">
-                <span className="lg:hidden block">{template.templateName}</span>
-                <span className="hidden lg:block">{template.templateName}</span>
-              </h1>
-              <p className="text-[#9CA0AB]   hidden text-base md:text-[26px] font-normal md:flex">
-                Home / <span className="lg:block hidden">All templates / </span>
-                <span className="light:text-primary text-primary ml-2">
-                  Template
-                </span>
-              </p>
-            </div>
-            <LazyLoadImage className="mt-6 mx-auto" src={line} alt="Line" />
-          </header>
+        <header className="pt-16" data-aos="fade-down">
+          <div className="flex justify-between md:items-center items-end">
+            <h1 className="text-4xl md:text-[56px] rubik_font font-medium primary-text">
+              {template.templateName}
+            </h1>
+            <p className="text-[#9CA0AB] hidden md:flex text-base md:text-[26px] font-normal">
+              Home / <span className="lg:block hidden">All templates / </span>
+              <span className="light:text-primary text-primary ml-2">
+                Template
+              </span>
+            </p>
+          </div>
+          <LazyLoadImage className="mt-4 mx-auto" src={line} alt="Line" />
         </header>
         <LazyLoadImage
-          className="mt-16 lg:mt-24"
+          className="mt-12 lg:mt-16"
           src={template.images[1]}
-          alt="Line"
+          alt="Template"
         />
 
-        {/* Main Content Section */}
-        <main className="mx-auto grid md:grid-cols-2 grid-cols-1 justify-center pt-16 pb-24 md:pt-24 md:pb-24 gap-20 md:gap-12 lg:gap-20">
-          <div className="bg-[#FFF5F6] dark:bg-[#212327] p-4 lg:p-7 rounded-2xl border-[0.5px] border-[#EB304D] dark:border-[#F5F5F5] order-2 md:order-1">
+        <main className="mx-auto grid md:grid-cols-2 grid-cols-1 justify-center pt-12 pb-16 gap-16">
+          <div className="bg-[#FFF5F6] dark:bg-[#212327] p-4 rounded-2xl border-[0.5px] border-[#EB304D] dark:border-[#F5F5F5]">
             <LazyLoadImage
               src={template.images[2]} // Assuming the third image as template image
               alt="Template Image"
@@ -54,10 +64,8 @@ export default function TemplateDetails() {
             />
           </div>
 
-          {/* Content Section */}
-          <div className="order-1 md:order-2">
-            {/* Overview Section */}
-            <section className="md:mb-12">
+          <div>
+            <section>
               <h2 className="text-[40px] leading-tight font-medium text-primary mb-4">
                 Overview
               </h2>
@@ -69,8 +77,27 @@ export default function TemplateDetails() {
               </p>
             </section>
 
-            {/* Include Pages Section */}
-            <section className="mb-12">
+            <section className="flex flex-wrap gap-3 my-8">
+              <button
+                onClick={() => openModal("pc")}
+                className="text-[18px] primary-btn-style font-medium"
+              >
+                View PC Mode
+              </button>
+              <button
+                onClick={() => openModal("phone")}
+                className="text-[18px] primary-btn-style font-medium"
+              >
+                View Phone Mode
+              </button>
+              <Link
+                to="/contact"
+                className="text-[18px] primary-btn-style font-medium"
+              >
+                Request A Demo
+              </Link>
+            </section>
+            <section className="mb-10">
               <h2 className="text-[40px] leading-tight font-medium text-primary mb-4">
                 Include pages
               </h2>
@@ -80,10 +107,8 @@ export default function TemplateDetails() {
                 ))}
               </ul>
             </section>
-
-            {/* Feature List Section */}
             <section>
-              <h2 className="text-[40px] leading-tight font-medium text-primary ">
+              <h2 className="text-[40px] leading-tight font-medium text-primary">
                 Feature List
               </h2>
               <p className="my-5 dark:text-[#CECECE] text-[#5F727F]">
@@ -102,6 +127,67 @@ export default function TemplateDetails() {
           </div>
         </main>
       </div>
+
+      {/* Modal for PC Mode */}
+      {modalState.pc && (
+        <div className="fixed inset-0  bg-black bg-opacity-50 flex items-center justify-center z-50 w-[100vw]">
+          <div className="mockup-browser bg-base-300 border w-[100vw]">
+            <div className="mockup-browser-toolbar pt-2">
+              <div className="input lowercase">
+                {`https://${template.templateName}.com`}
+              </div>
+              <button
+                className="text-white  border  rounded-full p-1 flex justify-center items-center text-2xl h-8 w-8 "
+                onClick={() => closeModal("pc")}
+              >
+                &times;
+              </button>
+            </div>
+            <div className="p-4 modal-content">
+              <iframe
+                src={template.liveLink}
+                title="PC Mode Demo"
+                className="w-full h-[90vh] border-none"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal for Phone Mode */}
+      {modalState.phone && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-base-300  rounded-lg overflow-hidden w-full max-w-[430px] max-h-[1000px]">
+            <div className="flex justify-between items-center px-4 py-2">
+              <h3 className="text-lg font-medium text-gray-200">
+                <div className="input font-normal lowercase h-7">
+                  {`https://${template.templateName}.com`}
+                </div>
+              </h3>
+              <button
+                className="text-white bg-base-300   border  rounded-full p-1 flex justify-center items-center text-2xl h-8 w-8 "
+                onClick={() => closeModal("phone")}
+              >
+                &times;
+              </button>
+            </div>
+            <div className="modal-content flex justify-center items-center">
+              <div className="relative flex justify-center h-[90vh] w-[430px] border-4 border-black rounded-2xl">
+                {/* iframe inside the phone */}
+                <div className="flex items-center justify-center w-full h-full">
+                  <iframe
+                    src={template.liveLink}
+                    title="Phone Mode Demo"
+                    className="w-full h-full rounded-xl"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
